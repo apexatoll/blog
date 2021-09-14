@@ -2,27 +2,20 @@
 
 class View extends Tags {
 	use traits\ClassParser;
+	use traits\SubClass;
 	use traits\ViewPaths;
+
+	private const NS = VIEW_NS;
+
 	public function __construct($params=[]){
-		$this->set_classes();
+		$this->group = $this->get_group_name();
 		if(!$this->is_root_class())
 			$this->set($params);
-	}
-	protected function set_classes(){
-		$this->group = $this->get_group_name();
 	}
 	protected function buffer($file, $vars=[]){
 		ob_start();
 		$this->render($file, $vars);
 		return ob_get_clean();
-	}
-	protected function render($file, $vars=[]){
-		foreach($vars as $key => $val)
-			$$key = $val;
-		require($file);
-	}
-	protected function render_layout($file, $vars=[]){
-		$this->render($this->layout_path($file), $vars);
 	}
 	protected function buffer_layout($file, $vars=[]){
 		return $this->buffer($this->layout_path($file), $vars);
@@ -38,12 +31,19 @@ class View extends Tags {
 			call_user_func_array([$this, $method], [$vars]);
 		return ob_get_clean();
 	}
-	protected function subclass($class, $params=[], $dir=null){
-		return new (
-			$this->subclass_str($class, $dir ?? $this->group)
-		)($params);
+	protected function render($file, $vars=[]){
+		foreach($vars as $key => $val)
+			$$key = $val;
+		require($file);
 	}
-	protected function subclass_str($class, $namespace){
-		return "\\views\\$namespace\\$class";
+	protected function render_layout($file, $vars=[]){
+		$this->render($this->layout_path($file), $vars);
+	}
+	protected function render_page($content, $title, $active, $layout="main"){
+		$this->render($this->page_layout_path($layout), [
+			"title"   => $title,
+			"active"  => $active,
+			"content" => $content
+		]);
 	}
 }

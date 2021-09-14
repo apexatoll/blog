@@ -1,7 +1,6 @@
 <?php namespace core\traits;
 
 trait ClassParser {
-	protected abstract function set_classes();
 	private function reflect(){
 		$this->reflect ??= new \ReflectionClass(get_class($this));
 		return $this->reflect;
@@ -31,14 +30,9 @@ trait ClassParser {
 	private function unchanging(){
 		return ["Series", "Auth"];
 	}
-	protected function to_singular(){
+	private function to_singular(){
 		return in_array($this->group, $this->unchanging()) ?
 			$this->group :
 			preg_replace("/ie$/", "y", preg_replace("/s$/", "", $this->group));
-	}
-	private function set($params){
-		foreach($params as $key => $val)
-			if($val && property_exists($this, $key))
-				$this->$key = $val;
 	}
 }
