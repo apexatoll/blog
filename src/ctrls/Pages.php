@@ -7,4 +7,7 @@ class Pages extends \core\Controller {
 	public function about(){
 		$this->view->page("about");
 	}
+	public function contact(){
+		$this->view->page("contact");
+	}
 }

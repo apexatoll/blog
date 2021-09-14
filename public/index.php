@@ -6,5 +6,6 @@ $r = new \core\Router;
 
 $r->get("/", "Pages#index");
 $r->get("/about", "Pages#about");
+$r->get("/contact", "Pages#contact");
 
 $r->route();
