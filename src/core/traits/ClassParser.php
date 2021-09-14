@@ -36,4 +36,9 @@ trait ClassParser {
 			$this->group :
 			preg_replace("/ie$/", "y", preg_replace("/s$/", "", $this->group));
 	}
+	private function set($params){
+		foreach($params as $key => $val)
+			if($val && property_exists($this, $key))
+				$this->$key = $val;
+	}
 }

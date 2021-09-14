@@ -3,8 +3,10 @@
 class View extends Tags {
 	use traits\ClassParser;
 	use traits\ViewPaths;
-	public function __construct(){
+	public function __construct($params=[]){
 		$this->set_classes();
+		if(!$this->is_root_class())
+			$this->set($params);
 	}
 	protected function set_classes(){
 		$this->group = $this->get_group_name();
