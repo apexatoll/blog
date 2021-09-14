@@ -11,5 +11,7 @@ define("MODEL_PATH", SRC."/".MODEL_NS);
 define("VIEW_PATH",  SRC."/".VIEW_NS);
 define("CTRL_PATH",  SRC."/".CTRL_NS);
 
+define("PAGE_DIR", "pages");
+
 foreach(["css", "js"] as $file)
 	require_once(__DIR__."/$file.php");

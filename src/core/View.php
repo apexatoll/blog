@@ -1,6 +1,6 @@
 <?php namespace core;
 
-class View {
+class View extends Tags {
 	use traits\ClassParser;
 	use traits\ViewPaths;
 	public function __construct(){
@@ -35,5 +35,13 @@ class View {
 		elseif(is_string($method))
 			call_user_func_array([$this, $method], [$vars]);
 		return ob_get_clean();
+	}
+	protected function subclass($class, $params=[], $dir=null){
+		return new (
+			$this->subclass_str($class, $dir ?? $this->group)
+		)($params);
+	}
+	protected function subclass_str($class, $namespace){
+		return "\\views\\$namespace\\$class";
 	}
 }
