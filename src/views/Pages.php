@@ -12,4 +12,7 @@ class Pages extends \core\View {
 	protected function header($location){
 		return $this->subclass("Header", ["location"=>$location], "pages")->build();
 	}
+	protected function footer(){
+		return (new \ctrls\Footers)->default();
+	}
 }

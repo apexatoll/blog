@@ -7,5 +7,6 @@
 <body>
 	<?=$this->header($active)?>
 	<?=$content?>
+	<?=$this->footer()?>
 </body>
 </html>
