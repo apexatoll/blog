@@ -2,6 +2,7 @@
 
 define("ROOT", preg_replace("/\/src.*?$/", "", __DIR__));
 define("SRC", ROOT."/src");
+define("ENV_PATH", SRC."/.env");
 
 define("MODEL_NS", "models");
 define("VIEW_NS",  "views");
