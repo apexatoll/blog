@@ -10,7 +10,7 @@ html {
   font-size: 20px;
 }
 
-button {
+button, input {
   font-size: 1em;
   border: 0;
 }
@@ -45,6 +45,14 @@ button {
 button:hover {
   color: #e39f31;
   transition: 0.4s;
+}
+
+button.cancel:hover {
+  color: #cc4131;
+}
+
+button.submit:hover {
+  color: #34d58d;
 }
 
 .container, main {
@@ -113,6 +121,24 @@ nav.main .active::before {
   color: #cc4131;
 }
 
+input {
+  color: #e39f31;
+  background: #0e151b;
+  padding: 0.2em 0.5em;
+}
+input::placeholder {
+  color: #407c9a;
+}
+
+form input {
+  padding: 0;
+  background: none;
+}
+
+footer form {
+  display: inline;
+}
+
 main {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -139,6 +165,25 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+footer form {
+  display: inline;
+}
+
+footer input {
+  padding: 0;
+  background: none;
+  width: 25vw;
+  max-width: 200px;
+}
+
+footer button, footer a {
+  margin: 0 0.5em;
+}
+
+footer .prompt {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

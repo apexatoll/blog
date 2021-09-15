@@ -1,0 +1,16 @@
+input {
+	@include color($yellow, $d-black);
+	padding:0.2em 0.5em;
+	&::placeholder {
+		color:$grey;
+	}
+}
+
+form input {
+	padding:0;
+	background:none;
+}
+
+footer form {
+	display:inline;
+}

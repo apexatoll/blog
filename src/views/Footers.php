@@ -10,7 +10,7 @@ class Footers extends \core\View {
 		return $this->prompt("user-slash");
 	}
 	protected function cancel(){
-		return $this->button("cancel", "footer-show-default");
+		return $this->button("cancel", "footer-show-default cancel");
 	}
 	private function prompt($icon, $inner=null){
 		return $this->span(

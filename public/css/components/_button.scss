@@ -2,3 +2,15 @@ button {
 	@include color_hover_bg($cyan, $yellow, none);
 	font-weight:bold;
 }
+
+button.cancel {
+	&:hover {
+		color:$red;
+	}
+}
+
+button.submit {
+	&:hover {
+		color:$green;
+	}
+}

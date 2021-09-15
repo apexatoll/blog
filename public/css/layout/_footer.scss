@@ -5,3 +5,22 @@ footer {
 	position:fixed;
 	bottom:0;
 }
+
+footer form {
+	display:inline;
+}
+
+footer input {
+	padding:0;
+	background:none;
+	width:25vw;
+	max-width:200px;
+}
+
+footer button, footer a {
+	margin:0 0.5em;
+}
+
+footer .prompt {
+	margin-right:10px;
+}
