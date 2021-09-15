@@ -18,7 +18,7 @@ class Posts extends Pages {
 		]);
 	}
 	private function post_header($post){
-		return "hello";
+		return $this->subclass("Header", $post)->make();
 	}
 	private function comments($post){
 		return "comments";

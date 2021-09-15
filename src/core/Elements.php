@@ -26,7 +26,12 @@ class Elements extends Tags {
 			$attr
 		);
 	}
-
+	protected function icon_button($icon, $attr=[]){
+		return $this->button($this->icon($icon), $attr);
+	}
+	protected function icon_a($icon, $href, $text=null){
+		return $this->a($this->icon($icon).$text, ["href"=>$href]);
+	}
 	protected function date($date = null, $text = null){
 		return $this->icon_div("clock", $this->format_date($data ?? $this->posted).$text, ["class"=>"date"]);
 	}

@@ -19,8 +19,17 @@ class Session {
 	public function logged_in(){
 		return isset($this->{PRIMARY_KEY});
 	}
+	public function is_admin(){
+		return $this->type == "admin";
+	}
 	public function can_post(){
 		return $this->type == "admin" || $this->type == "poster";
+	}
+	public function is_author($author){
+		return $this->username === $author;
+	}
+	public function can_edit($author){
+		return $this->is_admin() || $this->is_author($author);
 	}
 	private function set(){
 		$user = (new \models\User)->find(["id"=>$_SESSION['id']]);
