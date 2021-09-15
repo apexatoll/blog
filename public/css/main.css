@@ -37,6 +37,14 @@ p {
   color: #296dcf;
 }
 
+.green {
+  color: #34d58d;
+}
+
+.red {
+  color: #cc4131;
+}
+
 button {
   color: #3db5e1;
   background: none;
