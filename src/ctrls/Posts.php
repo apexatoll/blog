@@ -11,9 +11,14 @@ class Posts extends \core\Controller {
 	public function view($post){
 		$this->model->load($post);
 		$this->view->post(
-			$this->model->build_with_id()// + 
-			//$this->count_comments($post)
+			$this->model->build_with_id() + 
+			$this->count_comments($post)
 		);
 		$this->model->update_views();
+	}
+	private function count_comments($post){
+		return [
+			"comment_count" => (new Comments)->count($post['id'])
+		];
 	}
 }

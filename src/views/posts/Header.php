@@ -32,6 +32,11 @@ class Header extends Preview {
 	protected function views(){
 		return $this->icon_div("mouse-pointer", $this->viewcount." views");
 	}
+	protected function comments(){
+		$count = $this->comment_count ?? 0;
+		return $this->icon_div("comments", "$count comments");
+			//$this->a("$count comments", ["href"=>"#comments"]));
+	}
 	private function parse_categories(){
 		foreach(explode(">", $this->categories) as $category)
 			$links[]= $this->search_link($category);
@@ -52,5 +57,8 @@ class Header extends Preview {
 	}
 	private function make_search($term){
 		return preg_replace("/[\s]/", "+", $term);
+	}
+	protected function share(){
+		return (new \views\posts\SocialMedia)->build();
 	}
 }

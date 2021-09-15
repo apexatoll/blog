@@ -17,3 +17,10 @@
 .meta-comment {
 	color:$ll-black;
 }
+
+
+.meta-post-header {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+}
+
