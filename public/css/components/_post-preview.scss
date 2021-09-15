@@ -1,0 +1,20 @@
+.post-preview {
+	@include shadow;
+	@include color($white, $d-black);
+	margin:10px 0;
+	@include pad(0.5em);
+	h3 {
+		font-size:1.3em;
+		padding:0.2em 0;
+	}
+}
+
+.post-preview .meta {
+	font-size:0.8em;
+	font-weight:bold;
+	padding:0.2em 0;
+	color:$ll-black;
+	div {
+		margin:2px 0;
+	}
+}
