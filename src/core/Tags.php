@@ -27,4 +27,7 @@ class Tags extends HTML {
 			["rel"=>"stylesheet", "href"=>CSS_DIR."/$file"]
 		);
 	}
+	protected function icon($icon){
+		return $this->span(null, ["class"=>"fas fa-$icon"]);
+	}
 }
