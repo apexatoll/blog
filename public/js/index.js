@@ -4,6 +4,8 @@ import {Validate} from "./lib/Validate.js"
 import {Form} from "./lib/Form.js"
 import {Footer} from "./lib/Footer.js"
 import {Cursor} from "./lib/Cursor.js"
+import {Popup} from "./lib/Popup.js"
+import {Confirm} from "./lib/Confirm.js"
 
 hljs.highlightAll();
 hljs.configure({tabReplace:'  '})

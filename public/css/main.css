@@ -493,6 +493,18 @@ footer form {
   box-shadow: inset 5px 5px 5px #05080a;
 }
 
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(10, 16, 20, 0.3);
+}
+
 main {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -548,6 +560,10 @@ footer .user {
 
 .thread > .thread {
   margin-left: 5%;
+}
+
+.popup {
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

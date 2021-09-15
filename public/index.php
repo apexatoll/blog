@@ -18,4 +18,6 @@ $r->get("/posts", "Posts#index");
 $r->get("/posts/new", "Posts#form_new", "val_can_post");
 $r->get("/posts/:id", "Posts#view");
 
+$r->post("/popups/confirm", "Popups#confirm");
+
 $r->route();

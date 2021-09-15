@@ -1,0 +1,9 @@
+.fullscreen {
+	width:100vw;
+	height:100vh;
+	position:fixed;
+	top:0;
+	bottom:0;
+	@include flex;
+	background:rgba($dd-black, 0.3);
+}
