@@ -1,6 +1,6 @@
 <?php namespace core;
 
-class View extends Tags {
+class View extends Elements {
 	use traits\ClassParser;
 	use traits\SubClass;
 	use traits\ViewPaths;
