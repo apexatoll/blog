@@ -14,10 +14,10 @@ class Router {
 	public function route(){
 		try {
 			$msg = $this->find_route()->execute($this->args());
-			if($msg) echo $msg;
+			if($msg) $this->success($msg);
 		}
 		catch(\Exception $e){
-			echo $e->getMessage();
+			Response::error($e->getMessage());
 		}
 	}
 	private function add_route($type, $path, $action, $auth=null){
@@ -38,5 +38,10 @@ class Router {
 	}
 	private function args(){
 		return $_POST + $_GET + $_FILES;
+	}
+	private function success($msg){
+		is_array($msg) ? 
+			Response::success(...$msg):
+			Response::success($msg);
 	}
 }
