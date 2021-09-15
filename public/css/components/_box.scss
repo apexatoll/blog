@@ -1,0 +1,12 @@
+.box {
+	@include radius;
+	@include shadow;
+	@include color($white, $black);
+	margin:20px 0;
+	h2 {
+		@include pad(0.5em, 0.2em);
+	}
+	.content {
+		@include pad(0.2em, 0.5em);
+	}
+}
