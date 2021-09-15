@@ -18,6 +18,9 @@ class View extends Elements {
 		$this->render($file, $vars);
 		return ob_get_clean();
 	}
+	protected function buffer_global($file, $vars=[]){
+		return $this->buffer($this->global_path($file), $vars);
+	}
 	protected function buffer_layout($file, $vars=[]){
 		return $this->buffer($this->layout_path($file), $vars);
 	}

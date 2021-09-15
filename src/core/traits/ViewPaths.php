@@ -13,6 +13,9 @@ trait ViewPaths {
 	protected function layout_path($file){
 		return $this->path($this->class_dir()."/layouts", $file);
 	}
+	protected function global_path($file){
+		return $this->path(VIEW_PATH."/global", $file);
+	}
 	private function page_layout_path($file){
 		return $this->path(VIEW_PATH."/".PAGE_DIR."/layouts", $file);
 	}
