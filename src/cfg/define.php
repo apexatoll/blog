@@ -4,6 +4,8 @@ define("ROOT", preg_replace("/\/src.*?$/", "", __DIR__));
 define("SRC", ROOT."/src");
 define("ENV_PATH", SRC."/.env");
 
+define("PRIMARY_KEY", "id");
+
 define("MODEL_NS", "models");
 define("VIEW_NS",  "views");
 define("CTRL_NS",  "ctrls");

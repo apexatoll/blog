@@ -35,4 +35,14 @@ trait ClassParser {
 			$this->group :
 			preg_replace("/ie$/", "y", preg_replace("/s$/", "", $this->group));
 	}
+	private function table_name(){
+		return strtolower($this->to_plural());
+	}
+	protected function to_plural(){
+		if(in_array(strtolower($this->group), $this->unchanging()))
+			return $this->group;
+		else return preg_match("/y$/", $this->group) ?
+			preg_replace("/y$/", "ies", $this->group) :
+			sprintf("%ss", $this->group);
+	}
 }
