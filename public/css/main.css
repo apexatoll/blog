@@ -28,6 +28,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #407c9a;
 }
 
+p {
+  line-height: 1.3em;
+  margin: 0.5em 0;
+}
+
 .blue {
   color: #296dcf;
 }
