@@ -12,6 +12,10 @@ class Pages extends \core\View {
 	protected function header($location){
 		return $this->subclass("Header", ["location"=>$location], "pages")->build();
 	}
+	protected function stylesheets(){
+		foreach(STYLES as $file)
+			echo $this->css($file);
+	}
 	protected function footer(){
 		return (new \ctrls\Footers)->default();
 	}

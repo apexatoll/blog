@@ -22,4 +22,9 @@ class Tags extends HTML {
 	protected function button($text, $attr=[]){
 		return $this->inline("button", $text, $attr);
 	}
+	protected function css($file){
+		return $this->tag("link", 
+			["rel"=>"stylesheet", "href"=>CSS_DIR."/$file"]
+		);
+	}
 }
