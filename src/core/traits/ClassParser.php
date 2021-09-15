@@ -30,7 +30,7 @@ trait ClassParser {
 	private function unchanging(){
 		return ["Series", "Auth"];
 	}
-	private function to_singular(){
+	protected function to_singular(){
 		return in_array($this->group, $this->unchanging()) ?
 			$this->group :
 			preg_replace("/ie$/", "y", preg_replace("/s$/", "", $this->group));

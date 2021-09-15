@@ -21,7 +21,7 @@ class Posts extends Pages {
 		return $this->subclass("Header", $post)->make();
 	}
 	private function comments($post){
-		return "comments";
+		return (new \ctrls\Comments)->print($post);
 	}
 	private function comment_box(){
 		return $this->subclass("CommentBox")->make();
