@@ -3,6 +3,6 @@
 		<a href="/"><span class="blue">$ </span>bristol code</a>
 	</h1>
 </header>
-<div class="nav main">
+<nav class="main">
 	<?=$this->navbar();?>
-</div>
+</nav>

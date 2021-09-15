@@ -1,0 +1,7 @@
+footer {
+	@include color($grey, $black);
+	font-size:1.1em;
+	width:100%;
+	position:fixed;
+	bottom:0;
+}

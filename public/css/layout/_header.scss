@@ -1,0 +1,10 @@
+header {
+	h1 a {
+		@include color_hover_bg($green, $yellow, $black);
+		@include radius("top");
+		@include shadow;
+		display:block;
+		font-size:1.1em;
+		padding:0.8em 2.5%;
+	}
+}

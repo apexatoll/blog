@@ -6,4 +6,12 @@ class Footers extends \core\View {
 			"footer"=>$this->buffer_file($menu, $vars)
 		]);
 	}
+	protected function guest_span(){
+		return $this->prompt("user-slash");
+	}
+	private function prompt($icon, $inner=null){
+		return $this->span(
+			$this->icon($icon).$inner, ["class"=>"prompt"]
+		);
+	}
 }

@@ -1,0 +1,28 @@
+nav {
+	@include flex(space-between);
+	@include radius("bottom");
+	@include shadow;
+	margin-bottom:20px;
+	font-weight:bold;
+	button, a {
+		@include standout($grey, $d-black);
+		text-align:center;
+		width:100%;
+		padding:0.1em;
+		&:first-child {
+			border-bottom-left-radius:10px;
+		}
+		&:last-child {
+			border-bottom-right-radius:10px;
+		}
+	}
+}
+
+nav.main {
+	font-size:1.2em;
+	.active {
+		@include before("~/", $blue);
+		color:$d-green;
+	}
+}
+

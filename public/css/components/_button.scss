@@ -1,0 +1,4 @@
+button {
+	@include color_hover_bg($cyan, $yellow, none);
+	font-weight:bold;
+}

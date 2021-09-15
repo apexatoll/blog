@@ -6,8 +6,10 @@
 	<?=$this->stylesheets()?>
 </head>
 <body>
-	<?=$this->header($active)?>
-	<?=$content?>
+	<main>
+		<?=$this->header($active)?>
+		<?=$content?>
+	</main>
 	<?=$this->footer()?>
 </body>
 </html>

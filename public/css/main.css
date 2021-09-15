@@ -1,0 +1,112 @@
+* {
+  font-family: "mononoki";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #aaaaaa;
+  background: #0a1014;
+  font-size: 20px;
+}
+
+button {
+  font-size: 1em;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3db5e1;
+}
+a:hover {
+  color: #e39f31;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #407c9a;
+}
+
+button {
+  color: #3db5e1;
+  background: none;
+  font-weight: bold;
+}
+button:hover {
+  color: #e39f31;
+}
+
+.container, main {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 5px 5px 5px #05080a;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+nav button, nav a {
+  color: #407c9a;
+  background: #0e151b;
+  text-align: center;
+  width: 100%;
+  padding: 0.1em;
+}
+nav button:hover, nav a:hover {
+  color: #0e151b;
+}
+nav button:hover, nav a:hover {
+  background: #407c9a;
+}
+nav button:first-child, nav a:first-child {
+  border-bottom-left-radius: 10px;
+}
+nav button:last-child, nav a:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+nav.main {
+  font-size: 1.2em;
+}
+nav.main .active {
+  color: #15a084;
+}
+nav.main .active::before {
+  color: #296dcf;
+  content: "~/";
+}
+
+main {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+header h1 a {
+  color: #34d58d;
+  background: #111a22;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 5px 5px 5px #05080a;
+  display: block;
+  font-size: 1.1em;
+  padding: 0.8em 2.5%;
+}
+header h1 a:hover {
+  color: #e39f31;
+}
+
+footer {
+  color: #407c9a;
+  background: #111a22;
+  font-size: 1.1em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
