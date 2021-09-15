@@ -209,6 +209,31 @@ footer form {
   padding-right: 10px;
 }
 
+.bar {
+  color: #407c9a;
+  background: #0e151b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 2.5% 0.2em;
+  box-shadow: 5px 5px 5px #05080a;
+}
+.bar button, .bar a {
+  color: #407c9a;
+}
+.bar button:hover, .bar a:hover {
+  color: #e39f31;
+  transition: 0.4s;
+}
+
+.bar-bottom {
+  border-radius: 0 0 10px 10px;
+}
+
+.bar-end {
+  justify-content: flex-end;
+}
+
 .list-bar {
   background: #0a1014;
   padding: 0.5em 0;
@@ -321,14 +346,20 @@ footer form {
   padding: 0.2em 0;
 }
 
-.post-preview .meta {
-  font-size: 0.8em;
+.meta {
+  font-size: 0.9em;
   font-weight: bold;
   padding: 0.2em 0;
-  color: #416481;
+  color: #aaaaaa;
 }
-.post-preview .meta div {
+.meta div {
   margin: 2px 0;
+}
+.meta .fas {
+  color: #416481;
+  width: 1em;
+  text-align: center;
+  margin-right: 0.2em;
 }
 
 main {

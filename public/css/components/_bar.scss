@@ -1,0 +1,16 @@
+.bar {
+	@include color($grey, $d-black);
+	@include flex(space-between);
+	@include pad(0.2em);
+	@include shadow;
+	button, a {
+		@include color_hover($grey, $yellow);
+	}
+}
+
+.bar-bottom {
+	@include radius("bottom");
+}
+.bar-end {
+	justify-content:flex-end;
+}
