@@ -1,7 +1,8 @@
 <?php namespace core;
 
-class Route {
+class Route extends Authorise {
 	public function __construct($path, $action, $auth=null){
+		parent::__construct();
 		$this->regex  = $this->convert($path);
 		$this->keys   = $this->extract_keys($path);
 		$this->auth   = $auth ?? null;
@@ -13,6 +14,7 @@ class Route {
 		return isset($this->uri);
 	}
 	public function execute($args){
+		$this->authorise();
 		return call_user_func_array(
 			$this->action, [$this->build_args($args)]);
 	}
@@ -43,5 +45,9 @@ class Route {
 	}
 	private function make_assoc($vars){
 		return array_combine($this->keys, array_slice($vars, 1));
+	}
+	private function authorise(){
+		if(isset($this->auth))
+			call_user_func([$this, $this->auth]);
 	}
 }

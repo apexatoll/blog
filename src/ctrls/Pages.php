@@ -13,4 +13,7 @@ class Pages extends \core\Controller {
 	public function not_found($uri){
 		$this->view->page_from_file("_404", "404", null, ["uri"=>$uri]);
 	}
+	public function forbidden(){
+		$this->view->page_from_file("forbidden");
+	}
 }
