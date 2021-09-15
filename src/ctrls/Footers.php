@@ -2,9 +2,9 @@
 
 class Footers extends \core\Controller {
 	public function default(){
-		return $this->show("guest");
+		return $this->show(["menu"=>"guest"]);
 	}
-	public function show($menu){
-		return $this->view->footer($menu);
+	public function show($params){
+		return $this->view->footer($params['menu']);
 	}
 }

@@ -8,6 +8,9 @@ $r->get("/", "Pages#index");
 $r->get("/about", "Pages#about");
 $r->get("/contact", "Pages#contact");
 
+$r->post("/footers/default", "Footers#default");
+$r->post("/footers/:menu", "Footers#show");
+
 //$r->get("/posts", "Posts#index");
 
 $r->route();

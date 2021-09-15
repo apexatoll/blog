@@ -9,6 +9,9 @@ class Footers extends \core\View {
 	protected function guest_span(){
 		return $this->prompt("user-slash");
 	}
+	protected function cancel(){
+		return $this->button("cancel", "footer-show-default");
+	}
 	private function prompt($icon, $inner=null){
 		return $this->span(
 			$this->icon($icon).$inner, ["class"=>"prompt"]
