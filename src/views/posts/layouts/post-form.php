@@ -11,6 +11,6 @@
 	<?=$images??null?>
 <?=$this->_box();?>
 
-<nav>
+<nav class="post-form">
 	<?=$buttons?>
 </nav>

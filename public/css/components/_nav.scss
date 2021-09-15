@@ -26,3 +26,12 @@ nav.main {
 	}
 }
 
+nav.post-form {
+	font-size:1.1em;
+	.cancel {
+		@include standout($red, $d-black);
+	}
+	.submit {
+		@include standout($d-green, $d-black);
+	}
+}
