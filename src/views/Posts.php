@@ -24,6 +24,6 @@ class Posts extends Pages {
 		return "comments";
 	}
 	private function comment_box(){
-		return "comment box";
+		return $this->subclass("CommentBox")->make();
 	}
 }

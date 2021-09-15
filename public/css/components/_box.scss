@@ -29,3 +29,10 @@
 	margin-bottom:0;
 	@include radius("top");
 }
+
+.box-comments {
+	textarea {
+		@include shadow(true);
+		@include radius;
+	}
+}
