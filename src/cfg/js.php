@@ -3,6 +3,7 @@
 define("JS_DIR", "/js");
 
 define("SCRIPTS", [
-	"jquery",
+	"jquery" => [],
+	"highlight" => [],
 	"index" => ["type"=>"module"]
 ]);

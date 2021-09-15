@@ -60,6 +60,90 @@ p {
   margin: 0.5em 0;
 }
 
+.hljs,
+.hljs-subst {
+  color: #34d58d;
+}
+
+.hljs-comment {
+  color: #407c9a;
+}
+
+.hljs-keyword {
+  color: #ff8700;
+}
+
+.hljs-attribute,
+.hljs-doctag,
+.hljs-name,
+.hljs-selector-tag {
+  color: #ff8700;
+  font-weight: 700;
+}
+
+.hljs-tag {
+  color: #3db5e1;
+}
+
+.hljs-number {
+  color: #cc4131;
+}
+
+.hljs-deletion,
+.hljs-quote,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-template-tag,
+.hljs-type {
+  color: #cc4131;
+}
+
+.hljs-section,
+.hljs-title {
+  color: #3db5e1;
+  font-weight: 700;
+}
+
+.hljs-link,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+  color: #3db5e1;
+  font-weight: bold;
+}
+
+.hljs-literal {
+  color: #78a960;
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code {
+  color: darkorange;
+}
+
+.hljs-meta,
+.hljs-meta-keyword {
+  color: #1f7199;
+}
+
+.hljs-meta-string {
+  color: #cc4131;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
 .blue {
   color: #296dcf;
 }

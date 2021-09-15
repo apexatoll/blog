@@ -5,6 +5,9 @@ import {Form} from "./lib/Form.js"
 import {Footer} from "./lib/Footer.js"
 import {Cursor} from "./lib/Cursor.js"
 
+hljs.highlightAll();
+hljs.configure({tabReplace:'  '})
+
 $(document).ready(()=>{
 	new Cursor().tick()
 })
