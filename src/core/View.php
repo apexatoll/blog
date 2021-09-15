@@ -8,7 +8,8 @@ class View extends Elements {
 	private const NS = VIEW_NS;
 
 	public function __construct($params=[]){
-		$this->group = $this->get_group_name();
+		$this->session = new Session;
+		$this->group   = $this->get_group_name();
 		if(!$this->is_root_class())
 			$this->set($params);
 	}
