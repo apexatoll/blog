@@ -17,7 +17,14 @@ class Router {
 			if($msg) $this->success($msg);
 		}
 		catch(errors\NotFound|errors\Forbidden $e){
-			$e->redirect();
+			switch($this->method){
+				case "GET":
+					$e->redirect();
+					break;
+				case "POST":
+					Response::error($e->getMessage());
+					break;
+			}
 		}
 		catch(\Exception $e){
 			Response::error($e->getMessage());
