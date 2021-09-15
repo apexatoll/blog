@@ -33,4 +33,7 @@ $(document).ready(()=>{
 	$(document).on("click", ".footer-submit-logout", (e)=>{
 		new Footer().logout();
 	})
+	$(document).on("click", ".footer-show-post", (e)=>{
+		new Footer().show("post");
+	})
 })

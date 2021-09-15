@@ -188,6 +188,7 @@ footer input {
 
 footer button, footer a {
   margin: 0 0.5em;
+  font-weight: bold;
 }
 
 footer .prompt {

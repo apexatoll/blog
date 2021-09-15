@@ -19,6 +19,9 @@ class Session {
 	public function logged_in(){
 		return isset($this->{PRIMARY_KEY});
 	}
+	public function can_post(){
+		return $this->type == "admin" || $this->type == "poster";
+	}
 	private function set(){
 		$user = (new \models\User)->find(["id"=>$_SESSION['id']]);
 		foreach($user as $col => $val)
