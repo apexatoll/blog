@@ -1,0 +1,8 @@
+.comment {
+	border:solid 5px $d-black;
+	border-top:none;
+	.content {
+		@include radius("bottom");
+		@include shadow(true);
+	}
+}

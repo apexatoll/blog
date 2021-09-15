@@ -348,6 +348,10 @@ footer form {
   justify-content: flex-end;
 }
 
+.bar-no-shadow {
+  box-shadow: none;
+}
+
 .list-bar {
   background: #0a1014;
   padding: 0.5em 0;
@@ -476,6 +480,19 @@ footer form {
   margin-right: 0.2em;
 }
 
+.meta-comment {
+  color: #416481;
+}
+
+.comment {
+  border: solid 5px #0e151b;
+  border-top: none;
+}
+.comment .content {
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 5px 5px 5px #05080a;
+}
+
 main {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -527,6 +544,10 @@ footer .prompt {
 footer .user {
   color: #15a084;
   margin-left: 10px;
+}
+
+.thread > .thread {
+  margin-left: 5%;
 }
 
 /*# sourceMappingURL=main.css.map */
