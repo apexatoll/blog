@@ -3,8 +3,8 @@
 class Session {
 	public $id, $username, $type;
 	public function __construct(){
-		if($id = self::logged_in())
-			$this->set($id);
+		if(isset($_SESSION['id']))
+			$this->set();
 	}
 	public static function start($data){
 		self::end();
@@ -16,11 +16,11 @@ class Session {
 		session_unset();
 		session_start();
 	}
-	public static function logged_in(){
-		return $_SESSION[PRIMARY_KEY] ?? false;
+	public function logged_in(){
+		return isset($this->{PRIMARY_KEY});
 	}
-	private function set($id){
-		$user = (new \models\User)->find(["id"=>$id]);
+	private function set(){
+		$user = (new \models\User)->find(["id"=>$_SESSION['id']]);
 		foreach($user as $col => $val)
 			if($val && property_exists($this, $col))
 				$this->$col = $val;

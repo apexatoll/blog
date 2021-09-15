@@ -17,4 +17,9 @@ class Footers extends \core\View {
 			$this->icon($icon).$inner, ["class"=>"prompt"]
 		);
 	}
+	protected function user_span(){
+		return $this->prompt("user", 
+			$this->span($this->session->username, ["class"=>"user"])
+		);
+	}
 }
