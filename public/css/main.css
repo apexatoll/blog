@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #407c9a;
 }
 
+.blue {
+  color: #296dcf;
+}
+
 button {
   color: #3db5e1;
   background: none;
