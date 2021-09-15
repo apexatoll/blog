@@ -209,6 +209,106 @@ footer form {
   padding-right: 10px;
 }
 
+.list-bar {
+  background: #0a1014;
+  padding: 0.5em 0;
+  box-shadow: 5px 5px 5px #05080a;
+  font-size: 0.9em;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+.list-bar .elements {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.list-bar .elements div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.list-bar div:first-of-type {
+  justify-content: flex-start;
+}
+.list-bar div:last-of-type {
+  justify-content: flex-end;
+}
+
+.list-bar-top {
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+
+.list-bar-bottom {
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  font-size: 1em;
+}
+.navigation button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  margin: 0 1em;
+}
+.navigation button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+}
+.navigation .page {
+  color: #407c9a;
+  font-weight: bold;
+  margin: 0 0.8em;
+}
+.navigation .inactive {
+  color: #16222c;
+}
+
+.manual-page form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manual-page form input {
+  border-radius: 10px 0 0 10px;
+  box-shadow: inset 5px 5px 5px #05080a;
+  color: #3db5e1;
+  background: #0a1014;
+  padding: 0;
+  width: 80%;
+}
+.manual-page form button {
+  border-radius: 0 10px 10px 0;
+  color: #3db5e1;
+  background: #0a1014;
+  padding: 0;
+  width: 20%;
+}
+.manual-page form button:hover {
+  color: #0a1014;
+  transition: 0.4s;
+}
+.manual-page form button:hover {
+  background: #3db5e1;
+  transition: 0.4s;
+}
+.manual-page form {
+  width: 4em;
+}
+
+.list .post-preview:last-of-type {
+  margin-bottom: 0;
+}
+.list .post-preview:first-of-type {
+  margin-top: 0;
+}
+
 .post-preview {
   box-shadow: 5px 5px 5px #05080a;
   color: #aaaaaa;

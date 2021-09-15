@@ -1,4 +1,4 @@
-<div class="list-bar bottom-bar">
+<div class="list-bar list-bar-bottom">
 	<div class="elements container">
 		<div class="selector">
 			<?=$selector;?>
