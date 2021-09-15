@@ -16,6 +16,12 @@ class Pages extends \core\View {
 		foreach(STYLES as $file)
 			echo $this->css($file);
 	}
+	protected function scripts(){
+		foreach(SCRIPTS as $key => $val)
+			echo $key ? 
+			$this->script($key, $val):
+			$this->script($val);
+	}
 	protected function footer(){
 		return (new \ctrls\Footers)->default();
 	}

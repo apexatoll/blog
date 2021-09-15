@@ -30,4 +30,9 @@ class Tags extends HTML {
 	protected function icon($icon){
 		return $this->span(null, ["class"=>"fas fa-$icon"]);
 	}
+	protected function script($file, $attr=[]){
+		return $this->inline("script", 
+			null, ["src"=>JS_DIR."/$file.js"]+$attr, ["defer"]
+		);
+	}
 }

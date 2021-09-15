@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>bristol code | <?=$title?></title>
 	<?=$this->stylesheets()?>
+	<?=$this->scripts()?>
 </head>
 <body>
 	<main>
