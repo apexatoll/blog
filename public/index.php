@@ -20,6 +20,7 @@ $r->get("/posts/:id", "Posts#view");
 
 $r->post("/comments/new", "Comments#new", "val_logged_in");
 $r->post("/comments/print/:id", "Comments#print");
+$r->post("/comments/delete", "Comments#delete");
 
 $r->post("/popups/confirm", "Popups#confirm");
 

@@ -11,4 +11,8 @@ class Comments extends \core\Controller {
 		$this->model->input($comment)->validate()->save();
 		return "comment posted";
 	}
+	public function delete($comment){
+		$this->model->load($comment)->destroy();
+		return "comment deleted";
+	}
 }
