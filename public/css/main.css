@@ -17,6 +17,31 @@ button, input, textarea {
   box-sizing: border-box;
 }
 
+article {
+  background: #0e151b;
+  box-shadow: 5px 5px 5px #05080a;
+  padding: 1em 2.5%;
+}
+article h1, article h2, article h3 {
+  text-decoration: underline;
+}
+
+li {
+  margin-left: 2em;
+}
+
+code {
+  color: #34d58d;
+  background: #0a1014;
+  box-shadow: inset 5px 5px 5px #05080a;
+  border-radius: 10px;
+  display: block;
+  padding: 1em;
+  margin: 20px 0;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
 a {
   text-decoration: none;
   color: #3db5e1;
