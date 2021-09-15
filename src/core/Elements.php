@@ -10,7 +10,9 @@ class Elements extends Tags {
 		]);
 	}
 	protected function _box(){
-		$this->_div();
-		$this->_div();
+		return join([
+			$this->_div(),
+			$this->_div()
+		]);
 	}
 }
