@@ -1,7 +1,7 @@
 <?php namespace views;
 
 class Posts extends Pages {
-	public function index(){
-		$this->page("index");
+	public function new(){
+		$this->page_from_str($this->subclass("Form")->new(), "new post");
 	}
 }

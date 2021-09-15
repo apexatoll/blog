@@ -1,12 +1,17 @@
 <?php namespace views;
 
 class Pages extends \core\View {
-	public function page($file, $title=null, $active=null, $vars=[], $layout="main"){
+	public function page_from_file($file, $title=null, $active=null, $vars=[], $layout="main"){
 		$this->render_page(
 			$this->buffer_file($file, $vars),
 			$title  ?? $file,
 			$active ?? $title ?? $file,
 			$layout
+		);
+	}
+	public function page_from_str($string, $title, $active=null, $layout="main"){
+		$this->render_page(
+			$string, $title, $active ?? $title, $layout
 		);
 	}
 	protected function header($location){

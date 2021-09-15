@@ -35,4 +35,10 @@ class Tags extends HTML {
 			null, ["src"=>JS_DIR."/$file.js"]+$attr, ["defer"]
 		);
 	}
+	protected function input($type, $attr=[], $opts=[]){
+		return $this->tag("input", ["type"=>$type]+$attr, $opts);
+	}
+	protected function textarea($text=null, $attr=[]){
+		return $this->inline("textarea", $text, $attr);
+	}
 }
