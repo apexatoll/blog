@@ -5,6 +5,10 @@ class Authorise extends Session {
 		if(!$this->can_post())
 			$this->forbidden();
 	}
+	public function val_logged_in(){
+		if(!$this->logged_in())
+			$this->forbidden();
+	}
 	private function forbidden(){
 		throw new errors\Forbidden;
 	}

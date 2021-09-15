@@ -66,6 +66,9 @@ abstract class Model extends Database {
 	protected function time_now(){
 		return date("Y-m-d H:i:s");
 	}
+	protected function session(){
+		return new \core\Session;
+	}
 	private function id(){
 		if(!$this->is_new())
 			return [PRIMARY_KEY=>$this->{PRIMARY_KEY}];

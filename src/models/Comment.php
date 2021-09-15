@@ -16,7 +16,7 @@ class Comment extends \core\Validate {
 	}
 	protected function input_new(){
 		//$this->val_logged_in();
-		//$this->author = $this->current_user();
+		$this->author = $this->session()->username;
 		$this->posted = $this->time_now();
 		$this->parent ??= "ROOT";
 	}
