@@ -14,6 +14,9 @@ export class Footer extends Validate {
 	login(){
 		this.post_redirect("/auth/login", new Form("#footer-login").collect())
 	}
+	logout(){
+		this.post_redirect("/auth/logout")
+	}
 }
 
 $(document).ready(()=>{
@@ -26,5 +29,8 @@ $(document).ready(()=>{
 	$(document).on("click", ".footer-submit-login", (e)=>{
 		e.preventDefault();
 		new Footer().login();
+	})
+	$(document).on("click", ".footer-submit-logout", (e)=>{
+		new Footer().logout();
 	})
 })

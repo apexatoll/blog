@@ -12,5 +12,6 @@ $r->post("/footers/default", "Footers#default");
 $r->post("/footers/:menu", "Footers#show");
 
 $r->post("/auth/login", "Auth#login");
+$r->post("/auth/logout", "Auth#logout");
 
 $r->route();

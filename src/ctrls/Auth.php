@@ -8,4 +8,8 @@ class Auth extends \core\Controller {
 			->login();
 		return "redirecting...";
 	}
+	public function logout(){
+		\core\Session::end();
+		return "redirecting...";
+	}
 }
