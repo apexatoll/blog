@@ -11,6 +11,6 @@ $r->get("/contact", "Pages#contact");
 $r->post("/footers/default", "Footers#default");
 $r->post("/footers/:menu", "Footers#show");
 
-//$r->get("/posts", "Posts#index");
+$r->post("/auth/login", "Auth#login");
 
 $r->route();

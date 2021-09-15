@@ -1,14 +1,18 @@
 import {Validate} from "./Validate.js"
+import {Form} from "./Form.js"
 
 export class Footer extends Validate {
 	constructor(){
-		super("footer-response")
+		super(".footer-response")
 	}
 	show(menu){
 		this.html(`/footers/${menu}`, "footer")
 	}
 	cancel(){
 		this.html(`/footers/default`, "footer");
+	}
+	login(){
+		this.post_redirect("/auth/login", new Form("#footer-login").collect())
 	}
 }
 
@@ -18,5 +22,9 @@ $(document).ready(()=>{
 	})
 	$(document).on("click", ".footer-show-default", (e)=>{
 		new Footer().cancel();
+	})
+	$(document).on("click", ".footer-submit-login", (e)=>{
+		e.preventDefault();
+		new Footer().login();
 	})
 })
