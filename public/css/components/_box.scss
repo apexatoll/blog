@@ -10,3 +10,9 @@
 		@include pad(0.2em, 0.5em);
 	}
 }
+
+.box.error {
+	h2 {
+		color:$red;
+	}
+}

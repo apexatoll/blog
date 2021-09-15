@@ -8,6 +8,6 @@ $r->get("/", "Pages#index");
 $r->get("/about", "Pages#about");
 $r->get("/contact", "Pages#contact");
 
-$r->get("/posts", "Posts#index");
+//$r->get("/posts", "Posts#index");
 
 $r->route();

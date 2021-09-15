@@ -104,6 +104,10 @@ nav.main .active::before {
   padding: 0.2em 2.5% 0.5em;
 }
 
+.box.error h2 {
+  color: #cc4131;
+}
+
 main {
   margin-top: 10px;
   margin-bottom: 40px;

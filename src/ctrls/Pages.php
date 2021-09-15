@@ -10,4 +10,7 @@ class Pages extends \core\Controller {
 	public function contact(){
 		$this->view->page("contact");
 	}
+	public function not_found($uri){
+		$this->view->page("_404", "404", null, ["uri"=>$uri]);
+	}
 }

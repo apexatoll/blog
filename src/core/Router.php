@@ -16,6 +16,9 @@ class Router {
 			$msg = $this->find_route()->execute($this->args());
 			if($msg) $this->success($msg);
 		}
+		catch(\core\errors\NotFound $e){
+			$e->redirect();
+		}
 		catch(\Exception $e){
 			Response::error($e->getMessage());
 		}
@@ -34,7 +37,7 @@ class Router {
 		foreach($this->routes[$this->method] as $route)
 			if($route->matches_uri($this->uri))
 				return $route;
-		throw new \Exception("not found");
+		throw new \core\errors\NotFound($this->uri);
 	}
 	private function args(){
 		return $_POST + $_GET + $_FILES;
