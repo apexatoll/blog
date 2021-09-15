@@ -14,6 +14,7 @@ $r->post("/footers/:menu", "Footers#show");
 $r->post("/auth/login", "Auth#login");
 $r->post("/auth/logout", "Auth#logout");
 
+$r->get("/posts", "Posts#index");
 $r->get("/posts/new", "Posts#form_new", "val_can_post");
 
 $r->route();

@@ -15,4 +15,27 @@ class Elements extends Tags {
 			$this->_div()
 		]);
 	}
+	protected function button_link($text, $href, $attr=[]){
+		return $this->button(
+			$this->a($text, ["href"=>$href] + $attr)
+		);
+	}
+	protected function icon_div($icon, $content, $attr=[]){
+		return $this->inline("div", 
+			sprintf("%s %s", $this->icon($icon), $content),
+			$attr
+		);
+	}
+
+	protected function date($date = null, $text = null){
+		return $this->icon_div("clock", $this->format_date($data ?? $this->posted).$text, ["class"=>"date"]);
+	}
+	protected function user($author=null){
+		return $this->icon_div("user", $author ?? $this->author, ["class"=>"user"]);
+	}
+	protected function format_date($date){
+		return strftime(
+			"%l:%M %p, %d %b %Y", 
+			strtotime($date));
+	}
 }
