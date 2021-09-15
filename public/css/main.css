@@ -21,6 +21,7 @@ a {
 }
 a:hover {
   color: #e39f31;
+  transition: 0.4s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +39,7 @@ button {
 }
 button:hover {
   color: #e39f31;
+  transition: 0.4s;
 }
 
 .container, main {
@@ -64,9 +66,11 @@ nav button, nav a {
 }
 nav button:hover, nav a:hover {
   color: #0e151b;
+  transition: 0.4s;
 }
 nav button:hover, nav a:hover {
   background: #407c9a;
+  transition: 0.4s;
 }
 nav button:first-child, nav a:first-child {
   border-bottom-left-radius: 10px;
@@ -116,6 +120,7 @@ header h1 a {
 }
 header h1 a:hover {
   color: #e39f31;
+  transition: 0.4s;
 }
 
 footer {
