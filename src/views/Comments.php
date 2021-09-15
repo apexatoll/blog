@@ -16,6 +16,6 @@ class Comments extends \core\ViewModel {
 		//return ob_get_clean();
 	}
 	protected function comment($comment){
-		//return $this->subclass("Comment", $comment)->make();
+		return $this->subclass("Comment", $comment)->build();
 	}
 }
