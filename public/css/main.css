@@ -18,6 +18,10 @@ button, input, textarea {
   box-sizing: border-box;
 }
 
+textarea, input {
+  width: 100%;
+}
+
 article {
   background: #0e151b;
   box-shadow: 5px 5px 5px #05080a;

@@ -16,6 +16,10 @@ button, input, textarea {
 	box-sizing:border-box;
 }
 
+textarea, input {
+	width:100%;
+}
+
 article {
 	background:$d-black;
 	@include shadow;
