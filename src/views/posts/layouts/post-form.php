@@ -1,6 +1,6 @@
 <?=$this->box($heading, "flush")?>
 	<div class="response"></div>
-	<form id="<?=$form_id?>">
+	<form id="<?=$form_id?>" class="post-form">
 		<?=$this->title()?>
 		<?=$this->categories()?>
 		<?=$this->tags()?>

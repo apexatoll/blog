@@ -1,0 +1,12 @@
+.search-box {
+	//@include flex(space-between);
+	@include flush_input_button($cyan, $l-black);
+	@include radius("bottom");
+	form input {
+		padding:0.2em 1em;
+	}
+	padding:0.5em;
+	padding-top:0;
+	margin:0;
+	margin-bottom:20px;
+}

@@ -78,3 +78,24 @@
 @mixin pad($top:0, $bottom:$top){
 	padding:$top 2.5% $bottom;
 }
+
+@mixin flush_input_button($fg, $bg, $pad:0.2em){
+	form {
+		@include flex;
+		input {
+			@include radius("left");
+			@include shadow(true);
+			@include color($fg, $dd-black);
+			padding:$pad;
+			width:80%;
+		}
+		button {
+			@include radius("right");
+			@include standout($fg, $bg);
+			padding:$pad;
+			width:20%;
+		}
+	}
+
+}
+

@@ -278,16 +278,6 @@ nav.post-form .submit:hover {
   color: #cc4131;
 }
 
-.box form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.box form input, .box form textarea {
-  width: 100%;
-}
-
 .box.flush {
   margin-bottom: 0;
   border-radius: 10px 10px 0 0;
@@ -582,6 +572,55 @@ footer form {
 }
 .tree .node > .node.closed {
   display: none;
+}
+
+.post-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.post-form input, .post-form textarea {
+  width: 100%;
+}
+
+.search-box {
+  border-radius: 0 0 10px 10px;
+  padding: 0.5em;
+  padding-top: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.search-box form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-box form input {
+  border-radius: 10px 0 0 10px;
+  box-shadow: inset 5px 5px 5px #05080a;
+  color: #3db5e1;
+  background: #0a1014;
+  padding: 0.2em;
+  width: 80%;
+}
+.search-box form button {
+  border-radius: 0 10px 10px 0;
+  color: #3db5e1;
+  background: #16222c;
+  padding: 0.2em;
+  width: 20%;
+}
+.search-box form button:hover {
+  color: #16222c;
+  transition: 0.4s;
+}
+.search-box form button:hover {
+  background: #3db5e1;
+  transition: 0.4s;
+}
+.search-box form input {
+  padding: 0.2em 1em;
 }
 
 main {

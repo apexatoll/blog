@@ -17,13 +17,13 @@
 	}
 }
 
-.box form {
-	@include flex;
-	flex-direction:column;
-	input, textarea {
-		width:100%;
-	}
-}
+//.post-form {
+	//@include flex;
+	////flex-direction:column;
+	//input, textarea {
+		//width:100%;
+	//}
+//}
 
 .box.flush {
 	margin-bottom:0;
