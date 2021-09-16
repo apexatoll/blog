@@ -9,6 +9,14 @@ class Form extends \core\View {
 			"buttons" => $this->new_buttons()
 		]);
 	}
+	public function edit(){
+		return $this->buffer_layout("post-form", [
+			"heading" => "edit post",
+			"form_id" => "edit-post",
+			"buttons" => $this->edit_buttons(),
+			"images"  => $this->images()
+		]);
+	}
 	protected function title(){
 		return $this->make_input("title");
 	}
@@ -29,10 +37,21 @@ class Form extends \core\View {
 			"name"=>"md", "placeholder"=>"Body...", "rows"=>"12"
 		]);
 	}
+	public function images(){
+		return $this->buffer_layout("images", [
+			"images" => $this->buffer_images()
+		]);
+	}
 	private function new_buttons(){
 		return join([
 			$this->button("cancel", ["class"=>"go-back cancel"]), 
 			$this->button("submit", ["class"=>"post-new-submit submit"])
+		]);
+	}
+	private function edit_buttons(){
+		return join([
+			$this->a("cancel", ["href" => "/posts/$this->id", "class"=>"cancel"]), 
+			$this->button("submit", ["class"=>"post-edit-submit submit"])
 		]);
 	}
 	private function make_input($prop){
@@ -44,5 +63,13 @@ class Form extends \core\View {
 	}
 	private function placeholder($type){
 		return sprintf("%s...", ucfirst($type));
+	}
+	private function buffer_images(){
+		foreach($this->images??[] as $img)
+			$buff[]= $this->buffer_layout("image", [
+				"name" => $img->name,
+				"path" => $img->rel_path()
+			]);
+		return isset($buff) ? join($buff): null;
 	}
 }

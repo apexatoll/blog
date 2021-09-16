@@ -3,6 +3,10 @@
 class Controller {
 	use traits\ClassParser;
 	use traits\ObjectMaker;
+	use traits\SubClass;
+
+	protected const NS = CTRL_NS;
+
 	public function __construct(){
 		$this->set_classes();
 		$this->session = new Session;

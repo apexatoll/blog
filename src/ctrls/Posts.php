@@ -4,6 +4,12 @@ class Posts extends \core\Controller {
 	public function form_new(){
 		$this->view->new();
 	}
+	public function form_edit($params){
+		$this->model->load($params);
+		if($this->model->is_public())
+			$this->subclass("Publish")->unpublish($params);
+		$this->view->edit($this->model->build_with_images());
+	}
 	public function new($post){
 		$id = $this->model->input($post)->validate()->save();
 		return ["post submitted", ["id"=>$id]];

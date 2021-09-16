@@ -4,6 +4,11 @@ class Posts extends Pages {
 	public function new(){
 		$this->page_from_str($this->subclass("Form")->new(), "new post");
 	}
+	public function edit($post){
+		$this->page_from_str($this->subclass("Form", $post)->edit(), "edit post");
+		//$this->build_page("edit post", $this->subclass("Form", 
+			//$post)->edit());
+	}
 	public function index($list){
 		$this->page_from_file("posts", "posts", "posts", ["list"=>$list]);
 	}
