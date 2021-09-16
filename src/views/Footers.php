@@ -9,8 +9,20 @@ class Footers extends \core\View {
 	protected function guest_span(){
 		return $this->prompt("user-slash");
 	}
+	protected function new_post(){
+		if($this->session->can_post())
+			return $this->a("new", "/posts/new");
+	}
+	protected function upload(){
+		if($this->session->can_post())
+			return $this->button("upload", "footer-show-upload");
+	}
 	protected function cancel(){
 		return $this->button("cancel", "footer-show-default cancel");
+	}
+	protected function publish(){
+		if($this->session->is_admin())
+			return $this->a("publish", "/posts/unpublished");
 	}
 	private function prompt($icon, $inner=null){
 		return $this->span(
