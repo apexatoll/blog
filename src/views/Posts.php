@@ -12,6 +12,9 @@ class Posts extends Pages {
 	public function index($list){
 		$this->page_from_file("posts", "posts", "posts", ["list"=>$list]);
 	}
+	public function unpublished($list){
+		$this->page_from_file("unpublished", "posts", "unpublished", ["list"=>$list]);
+	}
 	public function post($post){
 		$this->page_from_str($this->build_post($post), $post['title'], "posts");
 	}

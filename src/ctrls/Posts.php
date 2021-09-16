@@ -18,6 +18,10 @@ class Posts extends \core\Controller {
 		$list = (new PostLists)->published($params);
 		$this->view->index($list);
 	}
+	public function unpublished($params){
+		$list = (new PostLists)->unpublished($params);
+		$this->view->unpublished($list);
+	}
 	public function view($post){
 		$this->model->load($post);
 		$this->view->post(

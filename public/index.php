@@ -17,6 +17,7 @@ $r->post("/auth/logout", "Auth#logout");
 $r->get("/posts", "Posts#index");
 $r->get("/posts/new", "Posts#form_new", "val_can_post");
 $r->get("/posts/edit/:id", "Posts#form_edit");
+$r->get("/posts/unpublished", "Posts#unpublished", "val_admin");
 $r->get("/posts/:id", "Posts#view");
 $r->post("/posts/publish/:id", "Posts\Publish#publish");
 $r->post("/posts/new/submit", "Posts#new", "val_can_post");

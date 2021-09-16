@@ -9,6 +9,10 @@ class Authorise extends Session {
 		if(!$this->logged_in())
 			$this->forbidden();
 	}
+	public function val_admin(){
+		if(!$this->is_admin())
+			$this->forbidden();
+	}
 	private function forbidden(){
 		throw new errors\Forbidden;
 	}
