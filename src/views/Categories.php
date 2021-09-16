@@ -6,7 +6,7 @@ class Categories extends \core\ViewModel {
 		return $this->buffer_method("build", "ROOT");
 	}
 	protected function build($parent){
-		$this->div(["class"=>"tree"]);
+		echo $this->div(["class"=>"tree"]);
 		$this->nodes($parent);
 	}
 	protected function nodes($parent){

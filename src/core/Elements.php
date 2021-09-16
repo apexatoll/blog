@@ -5,7 +5,7 @@ class Elements extends Tags {
 		$class = $class ? "box $class" : "box";
 		return join([
 			$this->div($class),
-			$this->h(2, $title),
+			$title? $this->h(2, $title) : null,
 			$content ? $this->div("content") : null
 		]);
 	}

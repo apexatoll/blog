@@ -1,0 +1,50 @@
+@mixin fa_before($str, $fg:$yellow){
+	&::before {
+		content:$str;
+		font-family:"Font Awesome 5 Free";
+		color:$fg;
+		padding-right:1em;
+		width:0.5em;
+	}
+}
+
+@mixin node($icon, $display){
+	@include fa_before($icon);
+	&+.links {
+		display:$display;
+	}
+}
+
+.tree {
+	@include radius;
+	@include shadow(true);
+	@include color($white, $dd-black);
+	padding:1em;
+	margin:0.5em;
+	.toggle-links {
+		float:right;
+	}
+	.read-more {
+		font-size:0.8em;
+		a {
+		@include color_hover($grey, $red);
+		}
+	}
+	button {
+		@include color_hover($white, $yellow);
+		@include flex;
+		display:inline-flex;
+		&.open {
+			@include node("\f0d7", block);
+		}
+		&.closed {
+			@include node("\f0da", none);
+		}
+	}
+	.node>.node{
+		margin-left:2.5%;
+		&.closed {
+			display:none;
+		}
+	}
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "mononoki";
   margin: 0;
@@ -517,6 +518,65 @@ footer form {
 
 .comment-form-reply {
   border-radius: 0;
+}
+
+.tree {
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 5px #05080a;
+  color: #aaaaaa;
+  background: #0a1014;
+  padding: 1em;
+  margin: 0.5em;
+}
+.tree .toggle-links {
+  float: right;
+}
+.tree .read-more {
+  font-size: 0.8em;
+}
+.tree .read-more a {
+  color: #407c9a;
+}
+.tree .read-more a:hover {
+  color: #cc4131;
+  transition: 0.4s;
+}
+.tree button {
+  color: #aaaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.tree button:hover {
+  color: #e39f31;
+  transition: 0.4s;
+}
+.tree button.open::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  color: #e39f31;
+  padding-right: 1em;
+  width: 0.5em;
+}
+.tree button.open + .links {
+  display: block;
+}
+.tree button.closed::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  color: #e39f31;
+  padding-right: 1em;
+  width: 0.5em;
+}
+.tree button.closed + .links {
+  display: none;
+}
+.tree .node > .node {
+  margin-left: 2.5%;
+}
+.tree .node > .node.closed {
+  display: none;
 }
 
 main {
