@@ -40,4 +40,7 @@ class Comment extends \core\Validate {
 		$this->deleted = true;
 		$this->save();
 	}
+	public function find_ordered($where=null){
+		return $this->find_all($where, ["order"=>["posted"=>"DESC"]]);
+	}
 }
