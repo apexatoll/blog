@@ -97,4 +97,7 @@ $(document).ready(()=>{
 	$(document).on("click", ".comment-reply-show", (e)=>{
 		new CommentReply(e).show();
 	})
+	$(document).on("click", ".comment-reply-hide", (e)=>{
+		new CommentReply(e).hide();
+	})
 })
