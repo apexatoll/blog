@@ -19,8 +19,8 @@ class PostFinders extends \core\View {
 	protected function top_bar($active){
 		foreach($this->bar_items() as $name => $icon)
 			echo $active == $name ?
-				$this->span($icon, ["class"=>"tab active"]):
-				$this->button($icon, ["class"=>"tab update", "id"=>"show-finder-$name"]);
+				$this->span($icon, ["class"=>"finder-tab active"]):
+				$this->button($icon, ["class"=>"finder-tab update", "id"=>"show-finder-$name"]);
 	}
 	private function bar_items(){
 		return [

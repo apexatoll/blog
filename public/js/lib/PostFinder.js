@@ -13,7 +13,7 @@ export class PostFinder extends Validate {
 }
 
 $(document).ready(()=>{
-	$(document).on("click", "button.tab.update", (e)=>{
+	$(document).on("click", "button.finder-tab.update", (e)=>{
 		new PostFinder(e.target).show();
 	})
 })
