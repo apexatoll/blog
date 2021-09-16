@@ -11,6 +11,8 @@ import {Confirm} from "./lib/Confirm.js"
 import * as Comments from "./lib/comments/import.js"
 import * as Posts from "./lib/posts/import.js"
 
+import {Tree} from "./lib/Tree.js"
+
 hljs.highlightAll();
 hljs.configure({tabReplace:'  '})
 
