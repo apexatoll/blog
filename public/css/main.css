@@ -521,7 +521,6 @@ footer form {
   color: #aaaaaa;
   background: #0a1014;
   padding: 1em;
-  margin: 0.5em;
 }
 .tree .toggle-links {
   float: right;
@@ -586,7 +585,7 @@ footer form {
 
 .search-box {
   border-radius: 0 0 10px 10px;
-  padding: 0.5em;
+  padding: 10px;
   padding-top: 0;
   margin: 0;
   margin-bottom: 20px;
@@ -621,6 +620,44 @@ footer form {
 }
 .search-box form input {
   padding: 0.2em 1em;
+}
+
+.finder .box {
+  margin-top: 0;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.finder .box .content {
+  padding: 10px;
+}
+.finder .bar {
+  background: none;
+  padding: 0 2.5%;
+  justify-content: flex-start;
+}
+.finder .bar .tab {
+  border-radius: 10px 30px 0 0;
+  box-shadow: 5px 0 2px -2px #05080a;
+  padding: 0.2em 1.4em;
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+.finder .bar .update {
+  color: #407c9a;
+  background: #0e151b;
+}
+.finder .bar .update:hover {
+  color: #3db5e1;
+  transition: 0.4s;
+}
+.finder .bar .update:hover {
+  background: #0e151b;
+  transition: 0.4s;
+}
+.finder .bar .active {
+  color: #e39f31;
+  background: #111a22;
 }
 
 main {

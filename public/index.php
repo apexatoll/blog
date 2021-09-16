@@ -30,4 +30,6 @@ $r->post("/comments/edit/submit", "Comments#edit");
 
 $r->post("/popups/confirm", "Popups#confirm");
 
+$r->post("/finders/show/:screen", "PostFinders#show");
+
 $r->route();

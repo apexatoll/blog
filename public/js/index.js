@@ -7,6 +7,7 @@ import {Footer} from "./lib/Footer.js"
 import {Cursor} from "./lib/Cursor.js"
 import {Popup} from "./lib/Popup.js"
 import {Confirm} from "./lib/Confirm.js"
+import {PostFinder} from "./lib/PostFinder.js"
 
 import * as Comments from "./lib/comments/import.js"
 import * as Posts from "./lib/posts/import.js"
