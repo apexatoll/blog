@@ -3,4 +3,4 @@
 <?=$this->_box()?>
 
 
-<?= (new \ctrls\PostFinders)->categories();?>
+<?= (new \ctrls\Accordions)->homepage();?>
