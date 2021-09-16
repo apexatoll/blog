@@ -14,6 +14,10 @@ class Posts extends \core\Controller {
 		$id = $this->model->input($post)->validate()->save();
 		return ["post submitted", ["id"=>$id]];
 	}
+	public function edit($post){
+		$this->model->input($post)->validate()->save();
+		return ["post updated", ["id"=>$post['id']]];
+	}
 	public function index($params){
 		$list = (new PostLists)->published($params);
 		$this->view->index($list);
