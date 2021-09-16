@@ -36,4 +36,7 @@ $(document).ready(()=>{
 	$(document).on("click", ".footer-show-post", (e)=>{
 		new Footer().show("post");
 	})
+	$(document).on("click", ".footer-show-upload", (e)=>{
+		new Footer().show("upload");
+	})
 })
