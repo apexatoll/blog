@@ -1,4 +1,4 @@
-<?=$this->box("Comments", "box-comments flush")?>
+<?=$this->box("Comments", "comment-form flush")?>
 <div class="comment-response"></div>
 <form id="comment-form-new">
 	<textarea name="body" rows="4" placeholder="Post comment..."></textarea>

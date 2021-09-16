@@ -18,4 +18,7 @@ class Comments extends \core\ViewModel {
 	protected function comment($comment){
 		return $this->subclass("Comment", $comment)->build();
 	}
+	public function reply($params){
+		return $this->subclass("Form")->reply($params);
+	}
 }

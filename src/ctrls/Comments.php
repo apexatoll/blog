@@ -15,4 +15,7 @@ class Comments extends \core\Controller {
 		$this->model->load($comment)->destroy();
 		return "comment deleted";
 	}
+	public function show_reply($params){
+		return $this->view->reply($params);
+	}
 }

@@ -287,11 +287,6 @@ nav.post-form .submit:hover {
   border-radius: 10px 10px 0 0;
 }
 
-.box-comments textarea {
-  box-shadow: inset 5px 5px 5px #05080a;
-  border-radius: 10px;
-}
-
 input, textarea {
   color: #15a084;
   background: #0e151b;
@@ -507,6 +502,17 @@ footer form {
   justify-content: center;
   align-items: center;
   background: rgba(10, 16, 20, 0.3);
+}
+
+.comment-form textarea {
+  box-shadow: inset 5px 5px 5px #05080a;
+  border-radius: 10px;
+}
+
+.comment-form-reply {
+  margin: 0;
+  padding: 8px;
+  border-radius: 0;
 }
 
 main {

@@ -30,9 +30,22 @@
 	@include radius("top");
 }
 
-.box-comments {
-	textarea {
-		@include shadow(true);
-		@include radius;
-	}
-}
+//.box-comments {
+	//textarea {
+		//@include shadow(true);
+		//@include radius;
+	//}
+//}
+
+//.box.comment-form {
+	//textarea {
+		//@include shadow(true);
+		//@include radius;
+	//}
+//}
+
+//.box.comment-insert {
+	//margin:0;
+	//padding:8px;
+	//border-radius:0;
+//}

@@ -55,6 +55,37 @@ export class Comments extends Validate {
 	}
 }
 
+export class CommentReply extends Comments {
+	constructor(source){
+		super(source);
+		this.form  = "#comment-form-reply"
+		this.class = ".comment-reply"
+	}
+	show(){
+		$(this.class).remove()
+		$(".comment").removeClass("flush");
+		this.post("/comments/reply/show", this.data(), (html)=>{
+			$(this.comment).after(html.message)
+			$(this.comment).addClass("flush")
+			this.scroll_to();
+		})
+	}
+	hide(){
+		$(this.class).slideUp(()=>{
+			this.refresh();
+		})
+	}
+	scroll_to(){
+		super.scroll_to("comment-form-reply");
+	}
+	data(){
+		return {
+			post_id:this.url_id(), 
+			parent: this.comment_id()
+		}
+	}
+}
+
 $(document).ready(()=>{
 	$(document).on("click", "#comment-submit-new", (e)=>{
 		e.preventDefault();
@@ -62,5 +93,8 @@ $(document).ready(()=>{
 	})
 	$(document).on("click", ".comment-delete", (e)=>{
 		new Comments(e).confirm_delete();
+	})
+	$(document).on("click", ".comment-reply-show", (e)=>{
+		new CommentReply(e).show();
 	})
 })
