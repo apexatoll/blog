@@ -16,10 +16,10 @@ class PostLists extends \core\View {
 			"selector" => $this->selector($params)
 		]);
 	}
-	//protected function search_results($search, $total){
-		//if(isset($search))
-			//return $this->buffer_layout("search", ["search"=>$search, "total"=>$total]);
-	//}
+	protected function search_results($search, $total){
+		if(isset($search))
+			return $this->buffer_layout("search", ["search"=>$search, "total"=>$total]);
+	}
 	protected function preview($post){
 		return (new posts\Preview($post))->make();
 	}
@@ -29,7 +29,7 @@ class PostLists extends \core\View {
 	private function selector($params){
 		return $this->subclass("Selector", $params)->make();
 	}
-	//protected function search_form($root){
-		//return $this->buffer_frag("search-form", ["root"=>$root]);
-	//}
+	protected function search_form($root){
+		return $this->buffer_global("search-form", ["root"=>$root]);
+	}
 }

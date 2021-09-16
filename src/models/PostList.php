@@ -12,26 +12,26 @@ class PostList extends \core\Model {
 	}
 	protected function input_new(){
 		$this->set_page_params();
-		//isset($this->search) ?
-			//$this->build_search():
+		isset($this->search) ?
+			$this->build_search():
 			$this->build_list();
 		$this->pages = $this->count_pages();
 	}
-	//private function build_search(){
-		//$this->posts = $this->search_items($this->opts());
-		//$this->total = $this->count_search();
-		//$this->root .= "?search=".$this->search;
-	//}
+	private function build_search(){
+		$this->posts = $this->search_items($this->opts());
+		$this->total = $this->count_search();
+		$this->root .= "?search=".$this->search;
+	}
 	private function build_list(){
 		$this->posts = $this->find_all($this->where, $this->opts());
 		$this->total = $this->count($this->where);
 	}
-	//private function search_items($opts=[]){
-		//return $this->search($this->search, $this->where, $opts);
-	//}
-	//private function count_search(){
-		//return count($this->search_items());
-	//}
+	private function search_items($opts=[]){
+		return $this->search($this->search, $this->where, $opts);
+	}
+	private function count_search(){
+		return count($this->search_items());
+	}
 	private function set_page_params(){
 		$this->page ??= 1;
 		$this->show ??= 10;
@@ -51,12 +51,12 @@ class PostList extends \core\Model {
 			"offset" => $this->offset
 		];
 	}
-	//protected function weight(){
-		//return [
-			//"title" => 0.8,
-			//"md" => 0.4,
-			//"tags" => 0.8,
-			//"categories" => 0.4
-		//];
-	//}
+	protected function weight(){
+		return [
+			"title" => 0.8,
+			"md" => 0.4,
+			"tags" => 0.8,
+			"categories" => 0.4
+		];
+	}
 }

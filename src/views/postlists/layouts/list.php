@@ -1,5 +1,5 @@
-<?//=$this->search_results($search??null, $total)?>
-<?//=$this->search_form($root)?>
+<?=$this->search_results($search??null, $total)?>
+<?=$this->search_form($root)?>
 
 <?=$top_bar?>
 <div class="list">

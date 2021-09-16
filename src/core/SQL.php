@@ -1,6 +1,7 @@
 <?php namespace core;
 
 class SQL {
+	use sql\Search;
 	private $table;
 	public function __construct($table){
 		$this->table = $table;
