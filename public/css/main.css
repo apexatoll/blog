@@ -291,7 +291,7 @@ input, textarea {
   margin: 2px 0;
 }
 input::placeholder, textarea::placeholder {
-  color: #407c9a;
+  color: #416481;
 }
 
 textarea {
@@ -508,6 +508,7 @@ footer form {
 .comment-form textarea {
   box-shadow: inset 5px 5px 5px #05080a;
   border-radius: 10px;
+  background: #0a1014;
 }
 
 .comment-form-insert {

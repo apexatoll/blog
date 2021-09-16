@@ -2,6 +2,7 @@
 	textarea {
 		@include shadow(true);
 		@include radius;
+		background:$dd-black;
 	}
 }
 
