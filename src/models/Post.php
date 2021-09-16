@@ -84,22 +84,22 @@ class Post extends \core\Validate {
 		$this->viewcount++;
 		$this->save();
 	}
-	//public function publish_with_date(){
-		//$this->published = 1;
-		//$this->update_posted();
-		//$this->save();
-	//}
-	//public function publish(){
-		//$this->published = 1;
-		//$this->save();
-	//}
-	//public function unpublish(){
-		//$this->published = 0;
-		//$this->save();
-	//}
-	//public function is_public(){
-		//return $this->published == 1;
-	//}
+	public function publish_with_date(){
+		$this->published = 1;
+		$this->update_posted();
+		$this->save();
+	}
+	public function publish(){
+		$this->published = 1;
+		$this->save();
+	}
+	public function unpublish(){
+		$this->published = 0;
+		$this->save();
+	}
+	public function is_public(){
+		return $this->published == 1;
+	}
 	//public function delete_file($file){
 		//$this->file_dir()->find($file)->delete();
 		////echo "delete file method";

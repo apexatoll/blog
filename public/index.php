@@ -17,6 +17,8 @@ $r->post("/auth/logout", "Auth#logout");
 $r->get("/posts", "Posts#index");
 $r->get("/posts/new", "Posts#form_new", "val_can_post");
 $r->get("/posts/:id", "Posts#view");
+$r->post("/posts/publish/:id", "Posts\Publish#publish");
+$r->post("/posts/unpublish/:id", "Posts\Publish#unpublish");
 
 $r->post("/comments/new", "Comments#new", "val_logged_in");
 $r->post("/comments/print/:id", "Comments#print");

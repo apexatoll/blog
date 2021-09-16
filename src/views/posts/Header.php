@@ -2,6 +2,10 @@
 
 class Header extends Preview {
 	protected $categories, $tags, $comment_count, $viewcount, $published, $author;
+	public function __construct($params=[]){
+		parent::__construct($params);
+		$this->class = strtolower($this->group);
+	}
 	public function make(){
 		return $this->buffer_layout("header");
 	}
@@ -18,16 +22,16 @@ class Header extends Preview {
 	protected function publish(){
 		if($this->session->is_admin())
 			return $this->published ?
-				$this->icon_button("eye-slash", "$this->group-unpublish"):
-				$this->icon_button("eye", "$this->group-publish");
+				$this->icon_button("eye-slash", "$this->class-unpublish"):
+				$this->icon_button("eye", "$this->class-publish");
 	}
 	protected function delete(){
 		if($this->session->is_admin())
-			return $this->icon_button("trash-alt", "$this->group-delete cancel");
+			return $this->icon_button("trash-alt", "$this->class-delete cancel");
 	}
 	protected function edit(){
 		if($this->session->can_edit($this->author))
-			return $this->icon_a("edit", "/$this->group/edit/$this->id");
+			return $this->icon_a("edit", "/$this->class/edit/$this->id");
 	}
 	protected function views(){
 		return $this->icon_div("mouse-pointer", $this->viewcount." views");

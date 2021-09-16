@@ -9,6 +9,7 @@ import {Confirm} from "./lib/Confirm.js"
 //import {Comments} from "./lib/Comments.js"
 
 import * as Comments from "./lib/comments/import.js"
+import * as Posts from "./lib/posts/import.js"
 
 hljs.highlightAll();
 hljs.configure({tabReplace:'  '})
