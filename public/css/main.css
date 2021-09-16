@@ -336,6 +336,10 @@ footer form {
   border-radius: 0 0 10px 10px;
 }
 
+.bar-top {
+  border-radius: 10px 10px 0 0;
+}
+
 .bar-end {
   justify-content: flex-end;
 }
@@ -661,6 +665,31 @@ footer form {
   background: #111a22;
 }
 
+.image-card {
+  border-radius: 10px;
+  color: #407c9a;
+  background: #16222c;
+  margin: 1em 0;
+}
+
+.image-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5em;
+}
+.image-card-content img {
+  margin-bottom: 0.2em;
+}
+
+.image-popup {
+  opacity: 0.7;
+}
+.image-popup:hover {
+  opacity: 1;
+}
+
 main {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -726,6 +755,13 @@ footer .user {
 
 .popup {
   width: 80%;
+}
+
+.uploaded-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */

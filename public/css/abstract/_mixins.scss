@@ -99,3 +99,9 @@
 
 }
 
+@mixin grid($cols:auto, $rows:auto, $gap:0){
+	display:grid;
+	grid-template-columns:$cols;
+	grid-template-rows:$rows;
+	grid-gap:$gap;
+}

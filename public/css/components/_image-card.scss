@@ -1,0 +1,14 @@
+.image-card {
+	@include radius;
+	@include color($grey, $l-black);
+	margin:1em 0;
+}
+
+.image-card-content {
+	@include flex;
+	flex-direction:column;
+	padding:0.5em;
+	img {
+		margin-bottom:0.2em;
+	}
+}

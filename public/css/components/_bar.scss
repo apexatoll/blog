@@ -11,6 +11,11 @@
 .bar-bottom {
 	@include radius("bottom");
 }
+
+.bar-top {
+	@include radius("top");
+}
+
 .bar-end {
 	justify-content:flex-end;
 }
