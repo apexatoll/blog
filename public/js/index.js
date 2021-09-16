@@ -18,4 +18,8 @@ hljs.configure({tabReplace:'  '})
 
 $(document).ready(()=>{
 	new Cursor().tick()
+	$(document).on("click", ".go-back", (e)=>{
+		e.preventDefault();
+		window.history.back()
+	})
 })

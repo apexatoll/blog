@@ -31,7 +31,7 @@ class Form extends \core\View {
 	}
 	private function new_buttons(){
 		return join([
-			$this->button("cancel", ["class"=>"history-back cancel"]), 
+			$this->button("cancel", ["class"=>"go-back cancel"]), 
 			$this->button("submit", ["class"=>"post-new-submit submit"])
 		]);
 	}
