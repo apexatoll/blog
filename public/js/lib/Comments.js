@@ -100,4 +100,7 @@ $(document).ready(()=>{
 	$(document).on("click", ".comment-reply-hide", (e)=>{
 		new CommentReply(e).hide();
 	})
+	$(document).on("click", ".comment-reply-submit", (e)=>{
+		new CommentReply(e).submit();
+	})
 })
