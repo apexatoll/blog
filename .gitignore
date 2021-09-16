@@ -1,2 +1,4 @@
 .projections.json
 src/.env
+src/tmp**
+public/files**

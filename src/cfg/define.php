@@ -16,5 +16,8 @@ define("CTRL_PATH",  SRC."/".CTRL_NS);
 
 define("PAGE_DIR", "pages");
 
+define("TMP_DIR", SRC."/tmp");
+define("POST_DIR", "/files");
+
 foreach(["css", "js"] as $file)
 	require_once(__DIR__."/$file.php");

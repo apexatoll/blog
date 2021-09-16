@@ -4,6 +4,10 @@ class Posts extends \core\Controller {
 	public function form_new(){
 		$this->view->new();
 	}
+	public function new($post){
+		$id = $this->model->input($post)->validate()->save();
+		return ["post submitted", ["id"=>$id]];
+	}
 	public function index($params){
 		$list = (new PostLists)->published($params);
 		$this->view->index($list);

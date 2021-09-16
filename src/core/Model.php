@@ -8,7 +8,7 @@ abstract class Model extends Database {
 	}
 	public function set($data){
 		foreach($data as $col => $val)
-			if($val !== null && property_exists($this, $col))
+			if($val != null && property_exists($this, $col))
 				$this->$col = $val;
 		return $this;
 	}
