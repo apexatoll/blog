@@ -8,6 +8,9 @@ class Comment extends \core\Validate {
 			self::RULE_REQ => ["body", "post_id"]
 		];
 	}
+	protected function edit_rules(){
+		return $this->new_rules();
+	}
 	protected function columns(){
 		return [
 			"body", "post_id", "posted", "author", 

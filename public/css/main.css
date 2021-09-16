@@ -509,9 +509,13 @@ footer form {
   border-radius: 10px;
 }
 
-.comment-form-reply {
+.comment-form-insert {
   margin: 0;
   padding: 8px;
+  border-radius: 10px 10px 0 0;
+}
+
+.comment-form-reply {
   border-radius: 0;
 }
 

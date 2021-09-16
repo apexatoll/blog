@@ -18,4 +18,8 @@ class Comments extends \core\Controller {
 	public function show_reply($params){
 		return $this->view->reply($params);
 	}
+	public function show_edit($params){
+		$comment = $this->model->find($params);
+		return $this->view->edit($comment);
+	}
 }

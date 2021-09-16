@@ -21,4 +21,7 @@ class Comments extends \core\ViewModel {
 	public function reply($params){
 		return $this->subclass("Form")->reply($params);
 	}
+	public function edit($params){
+		return $this->subclass("Form")->edit($params);
+	}
 }

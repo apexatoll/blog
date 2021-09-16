@@ -86,6 +86,31 @@ export class CommentReply extends Comments {
 	}
 }
 
+export class CommentEdit extends Comments {
+	constructor(source){
+		super(source)
+		this.submit_path = "/comments/edit/submit"
+		this.form  = "#comment-form-edit"
+	}
+	show(){
+		this.post("/comments/edit/show", this.data(), (json)=>{
+			$(this.comment).replaceWith(json.message);
+			this.scroll_to()
+		})
+	}
+	hide(){
+		this.refresh();
+	}
+	scroll_to(){
+		super.scroll_to("comment-form-edit");
+	}
+	data(){
+		return {
+			id:this.comment_id()
+		}
+	}
+}
+
 $(document).ready(()=>{
 	$(document).on("click", "#comment-submit-new", (e)=>{
 		e.preventDefault();
@@ -102,5 +127,14 @@ $(document).ready(()=>{
 	})
 	$(document).on("click", ".comment-reply-submit", (e)=>{
 		new CommentReply(e).submit();
+	})
+	$(document).on("click", ".comment-edit-show", (e)=>{
+		new CommentEdit(e).show();
+	})
+	$(document).on("click", ".comment-edit-hide", (e)=>{
+		new CommentEdit(e).hide();
+	})
+	$(document).on("click", ".comment-edit-submit", (e)=>{
+		new CommentEdit(e).submit();
 	})
 })

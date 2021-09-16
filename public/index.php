@@ -22,6 +22,7 @@ $r->post("/comments/new", "Comments#new", "val_logged_in");
 $r->post("/comments/print/:id", "Comments#print");
 $r->post("/comments/delete", "Comments#delete");
 $r->post("/comments/reply/show", "Comments#show_reply");
+$r->post("/comments/edit/show", "Comments#show_edit");
 
 $r->post("/popups/confirm", "Popups#confirm");
 

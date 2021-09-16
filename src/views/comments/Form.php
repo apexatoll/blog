@@ -8,4 +8,12 @@ class Form extends \core\View {
 			"params"  => $params
 		]);
 	}
+	public function edit($params){
+		return $this->buffer_layout("comment-form", [
+			"class" => "edit",
+			"body" => $params['body'],
+			"params" => ["id"=>$params['id']],
+			"prompt" => "Edit comment..."
+		]);
+	}
 }

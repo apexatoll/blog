@@ -5,8 +5,12 @@
 	}
 }
 
-.comment-form-reply {
+.comment-form-insert {
 	margin:0;
 	padding:8px;
+	@include radius("top");
+}
+
+.comment-form-reply {
 	border-radius:0;
 }

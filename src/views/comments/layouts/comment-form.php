@@ -1,5 +1,5 @@
 <div class="comment-reply">
-	<div class="box comment-form comment-form-<?=$class?>">
+	<div class="box comment-form comment-form-insert comment-form-<?=$class?>">
 		<form id="comment-form-<?=$class?>">
 			<?foreach($params as $key => $val):?>
 			<input type="hidden" name="<?=$key;?>" value="<?=$val;?>">
