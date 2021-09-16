@@ -22,4 +22,10 @@ class Comments extends \core\Controller {
 		$comment = $this->model->find($params);
 		return $this->view->edit($comment);
 	}
+	public function edit($comment){
+		$this->model
+			->load(["id"=>$comment['id']])
+			->input(["body"=>$comment['body']])->save();
+		return "comment updated";
+	}
 }
