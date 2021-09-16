@@ -1,6 +1,6 @@
-import {Form} from "./Form.js"
+import {Form}     from "./Form.js"
 import {Validate} from "./Validate.js"
-import {Confirm} from "./Confirm.js"
+import {Confirm}  from "./Confirm.js"
 
 export class Comments extends Validate {
 	constructor(source){
@@ -59,7 +59,7 @@ export class CommentReply extends Comments {
 	constructor(source){
 		super(source);
 		this.form  = "#comment-form-reply"
-		this.class = ".comment-reply"
+		this.class = ".comment-form-reply"
 	}
 	show(){
 		$(this.class).remove()

@@ -19,9 +19,9 @@ class Comments extends \core\ViewModel {
 		return $this->subclass("Comment", $comment)->build();
 	}
 	public function reply($params){
-		return $this->subclass("Form")->reply($params);
+		return $this->subclass("Form", $params)->reply();
 	}
 	public function edit($params){
-		return $this->subclass("Form")->edit($params);
+		return $this->subclass("Form", $params)->edit();
 	}
 }
