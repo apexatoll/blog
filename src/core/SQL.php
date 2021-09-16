@@ -2,6 +2,7 @@
 
 class SQL {
 	use sql\Search;
+	use sql\Archives;
 	private $table;
 	public function __construct($table){
 		$this->table = $table;

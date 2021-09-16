@@ -5,3 +5,7 @@
 <?=$this->box();?>
 <?print_r((new \ctrls\Categories)->tree())?>
 <?=$this->_box();?>
+
+<?=$this->box();?>
+<?print_r((new \ctrls\Archives)->published())?>
+<?=$this->_box();?>
