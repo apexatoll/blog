@@ -13,8 +13,13 @@ footer form {
 footer input {
 	padding:0;
 	background:none;
-	width:25vw;
 	margin:0;
+	min-width:25vw;
+	max-width:50vw;
+}
+
+footer input[type="text"],
+footer input[type="password"] {
 	max-width:200px;
 }
 
