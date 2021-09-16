@@ -201,6 +201,7 @@ nav {
   border-radius: 0 0 10px 10px;
   box-shadow: 5px 5px 5px #05080a;
   margin-bottom: 20px;
+  font-size: 1.1em;
   font-weight: bold;
 }
 nav button, nav a {
@@ -224,6 +225,30 @@ nav button:first-child, nav a:first-child {
 nav button:last-child, nav a:last-child {
   border-bottom-right-radius: 10px;
 }
+nav .cancel {
+  color: #cc4131;
+  background: #0e151b;
+}
+nav .cancel:hover {
+  color: #0e151b;
+  transition: 0.4s;
+}
+nav .cancel:hover {
+  background: #cc4131;
+  transition: 0.4s;
+}
+nav .submit {
+  color: #15a084;
+  background: #0e151b;
+}
+nav .submit:hover {
+  color: #0e151b;
+  transition: 0.4s;
+}
+nav .submit:hover {
+  background: #15a084;
+  transition: 0.4s;
+}
 
 nav.main {
   font-size: 1.2em;
@@ -234,34 +259,6 @@ nav.main .active {
 nav.main .active::before {
   color: #296dcf;
   content: "~/";
-}
-
-nav.post-form {
-  font-size: 1.1em;
-}
-nav.post-form .cancel {
-  color: #cc4131;
-  background: #0e151b;
-}
-nav.post-form .cancel:hover {
-  color: #0e151b;
-  transition: 0.4s;
-}
-nav.post-form .cancel:hover {
-  background: #cc4131;
-  transition: 0.4s;
-}
-nav.post-form .submit {
-  color: #15a084;
-  background: #0e151b;
-}
-nav.post-form .submit:hover {
-  color: #0e151b;
-  transition: 0.4s;
-}
-nav.post-form .submit:hover {
-  background: #15a084;
-  transition: 0.4s;
 }
 
 .box {

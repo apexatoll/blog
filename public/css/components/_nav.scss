@@ -3,6 +3,7 @@ nav {
 	@include radius("bottom");
 	@include shadow;
 	margin-bottom:20px;
+	font-size:1.1em;
 	font-weight:bold;
 	button, a {
 		@include standout($grey, $d-black);
@@ -16,6 +17,12 @@ nav {
 			border-bottom-right-radius:10px;
 		}
 	}
+	.cancel {
+		@include standout($red, $d-black);
+	}
+	.submit {
+		@include standout($d-green, $d-black);
+	}
 }
 
 nav.main {
@@ -23,15 +30,5 @@ nav.main {
 	.active {
 		@include before("~/", $blue);
 		color:$d-green;
-	}
-}
-
-nav.post-form {
-	font-size:1.1em;
-	.cancel {
-		@include standout($red, $d-black);
-	}
-	.submit {
-		@include standout($d-green, $d-black);
 	}
 }
