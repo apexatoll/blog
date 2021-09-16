@@ -697,6 +697,7 @@ footer input {
   padding: 0;
   background: none;
   width: 25vw;
+  margin: 0;
   max-width: 200px;
 }
 
