@@ -33,7 +33,7 @@
 	button {
 		@include color_hover($white, $yellow);
 		@include flex;
-		margin:5px;
+		margin:2px;
 		display:inline-flex;
 		&.open {
 			@include node("\f0d7", block);
@@ -43,12 +43,12 @@
 		}
 	}
 	.node>.node{
-		margin-left:3%;
+		margin-left:5vw;
 		&.closed {
 			display:none;
 		}
 	}
 	.node ul {
-		margin-left:1em;
+		margin-left:0.6em;
 	}
 }

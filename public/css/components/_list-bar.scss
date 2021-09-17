@@ -1,6 +1,7 @@
 .list-bar {
-	background:$dd-black;
+	background:$d-black;
 	padding:0.5em 0;
+	position:relative;
 	@include shadow;
 	font-size:0.9em;
 	color:$white;
@@ -23,11 +24,13 @@
 .list-bar-top {
 	@include radius("top");
 	margin-top:10px;
+	z-index:-1;
 }
 
 .list-bar-bottom {
 	@include radius("bottom");
 	margin-bottom:10px;
+	z-index:1;
 }
 
 .navigation {

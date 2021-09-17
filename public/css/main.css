@@ -51,7 +51,7 @@ textarea, input {
 }
 
 article {
-  background: #0e151b;
+  background: #111a22;
   box-shadow: 5px 5px 5px #05080a;
   padding: 1em 2.5%;
 }
@@ -341,7 +341,7 @@ nav.main .active::before {
   border-radius: 10px;
   box-shadow: 5px 5px 5px #05080a;
   color: #aaaaaa;
-  background: #0e151b;
+  background: #111a22;
   margin: 30px 0;
 }
 .box h2 {
@@ -424,8 +424,9 @@ footer form {
 }
 
 .list-bar {
-  background: #0a1014;
+  background: #0e151b;
   padding: 0.5em 0;
+  position: relative;
   box-shadow: 5px 5px 5px #05080a;
   font-size: 0.9em;
   color: #aaaaaa;
@@ -452,11 +453,13 @@ footer form {
 .list-bar-top {
   border-radius: 10px 10px 0 0;
   margin-top: 10px;
+  z-index: -1;
 }
 
 .list-bar-bottom {
   border-radius: 0 0 10px 10px;
   margin-bottom: 10px;
+  z-index: 1;
 }
 
 .navigation {
@@ -524,7 +527,7 @@ footer form {
 .post-preview {
   box-shadow: 5px 5px 5px #05080a;
   color: #aaaaaa;
-  background: #0e151b;
+  background: #111a22;
   margin: 20px 0;
   padding: 0.5em 2.5% 0.5em;
   position: relative;
@@ -535,8 +538,8 @@ footer form {
 }
 .post-preview .bookmark {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0.5em;
+  right: 2.5%;
   color: #416481;
   font-size: 1.2em;
 }
@@ -569,16 +572,12 @@ footer form {
   grid-template-columns: 1fr 1fr;
 }
 
-.comment {
-  border: solid 8px #0e151b;
-  border-top: none;
-}
 .comment .content {
   border-radius: 0 0 10px 10px;
   background: #111a22;
 }
 .comment .bar {
-  background: #0e151b;
+  background: #0a1014;
 }
 
 .fullscreen {
@@ -634,7 +633,7 @@ footer form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 2px;
   display: inline-flex;
 }
 .tree button:hover {
@@ -661,13 +660,13 @@ footer form {
   display: none;
 }
 .tree .node > .node {
-  margin-left: 3%;
+  margin-left: 5vw;
 }
 .tree .node > .node.closed {
   display: none;
 }
 .tree .node ul {
-  margin-left: 1em;
+  margin-left: 0.6em;
 }
 
 .post-form {
@@ -703,12 +702,12 @@ footer form {
 .search-box form button {
   border-radius: 0 10px 10px 0;
   color: #e39f31;
-  background: #111a22;
+  background: #16222c;
   padding: 0.2em;
   width: 20%;
 }
 .search-box form button:hover {
-  color: #111a22;
+  color: #16222c;
 }
 .search-box form button:hover {
   background: #e39f31;
@@ -742,17 +741,17 @@ footer form {
 }
 .finder-tab.update {
   color: #416481;
-  background: #090e13;
+  background: #0a1014;
 }
 .finder-tab.update:hover {
   color: #3db5e1;
 }
 .finder-tab.update:hover {
-  background: #090e13;
+  background: #0a1014;
 }
 .finder-tab.active {
   color: #c6851b;
-  background: #0e151b;
+  background: #111a22;
 }
 
 .image-card {
@@ -837,6 +836,7 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 
 footer form {
@@ -847,13 +847,12 @@ footer input {
   padding: 0;
   background: none;
   margin: 0;
-  min-width: 25vw;
   max-width: 30vw;
 }
 
 footer input[type=text],
 footer input[type=password] {
-  width: 10vw;
+  width: 22%;
   max-width: 200px;
 }
 

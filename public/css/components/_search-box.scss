@@ -1,5 +1,5 @@
 .search-box {
-	@include flush_input_button($yellow, $black);
+	@include flush_input_button($yellow, $l-black);
 	@include radius("bottom");
 	form input {
 		padding:0.2em 1em;

@@ -1,6 +1,6 @@
 .post-preview {
 	@include shadow;
-	@include color($white, $d-black);
+	@include color($white, $black);
 	margin:20px 0;
 	@include pad(0.5em);
 	position:relative;
@@ -10,8 +10,8 @@
 	}
 	.bookmark {
 		position:absolute;
-		top:1em;
-		right:1em;
+		top:0.5em;
+		right:2.5%;
 		@include color_hover($ll-black, $red);
 		font-size:1.2em;
 	}

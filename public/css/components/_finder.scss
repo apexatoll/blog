@@ -22,9 +22,9 @@
 	font-size:1.2em;
 	margin-right:2.5%;
 	&.update {
-		@include color_bg_hover($ll-black, $cyan, $ddd-black, $ddd-black);
+		@include color_bg_hover($ll-black, $cyan, $dd-black, $dd-black);
 	}
 	&.active {
-		@include color(darken($yellow, 10%), $d-black);
+		@include color(darken($yellow, 10%), $black);
 	}
 }
