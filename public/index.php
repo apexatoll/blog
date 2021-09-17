@@ -24,6 +24,7 @@ $r->post("/posts/publish/:id", "Posts\Publish#publish");
 $r->post("/posts/new/submit", "Posts#new", "val_can_post");
 $r->post("/posts/edit/submit/:id", "Posts#edit");
 $r->post("/posts/unpublish/:id", "Posts\Publish#unpublish");
+$r->post("/posts/delete/:id", "Posts#delete");
 
 $r->post("/comments/new", "Comments#new", "val_logged_in");
 $r->post("/comments/print/:id", "Comments#print");

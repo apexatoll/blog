@@ -4,10 +4,9 @@ class Posts extends \core\Controller {
 	public function form_new(){
 		$this->view->new();
 	}
-	public function form_edit($params){
-		$this->model->load($params);
-		if($this->model->is_public())
-			$this->subclass("Publish")->unpublish($params);
+	public function form_edit($post){
+		$this->model->load($post);
+		$this->unpublish($post);
 		$this->view->edit($this->model->build_with_images());
 	}
 	public function new($post){
@@ -34,9 +33,19 @@ class Posts extends \core\Controller {
 		);
 		$this->model->update_views();
 	}
+	public function delete($post){
+		$this->model->load($post);
+		$this->unpublish($post);
+		$this->model->destroy();
+		return "post deleted";
+	}
 	private function count_comments($post){
 		return [
 			"comment_count" => (new Comments)->count($post['id'])
 		];
+	}
+	private function unpublish($post){
+		if($this->model->is_public())
+			$this->subclass("Publish")->unpublish($post);
 	}
 }

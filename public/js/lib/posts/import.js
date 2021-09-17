@@ -1,5 +1,6 @@
 import {Upload}  from "./Upload.js"
 import {Publish} from "./Publish.js"
+import {Delete}  from "./Delete.js"
 
 $(document).ready(()=>{
 	$(document).on("click", ".post-new-submit", (e)=>{
@@ -19,5 +20,8 @@ $(document).ready(()=>{
 	})
 	$(document).on("click", ".posts-unpublish", (e)=>{
 		new Publish().unpublish()
+	})
+	$(document).on("click", ".posts-delete", (e)=>{
+		new Delete().confirm_delete()
 	})
 })
