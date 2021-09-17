@@ -3,7 +3,7 @@
 trait SubClass {
 	protected function subclass($class, $params=[], $dir=null){
 		return new (
-			$this->subclass_str($class, $dir ?? $this->group)
+			$this->subclass_str($class, $dir ?? strtolower($this->group))
 		)($params);
 	}
 	protected function subclass_str($class, $namespace){
