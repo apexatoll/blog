@@ -1,0 +1,26 @@
+.social-media {
+	.reddit {
+		color:darken($orange, 18%);
+		&:hover {
+			color:darken($orange, 5%);
+		}
+	}
+	.twitter {
+		color:darken($cyan, 15%);
+		&:hover {
+			color:lighten($cyan, 5%);
+		}
+	}
+	.facebook {
+		color:darken($blue, 10%);
+		&:hover {
+			color:lighten($blue, 5%);
+		}
+	}
+	.pinterest {
+		color:darken($red, 15%);
+		&:hover {
+			color:$red;
+		}
+	}
+}
