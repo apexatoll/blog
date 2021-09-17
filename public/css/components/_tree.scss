@@ -20,6 +20,7 @@
 	@include shadow(true);
 	@include color($white, $dd-black);
 	padding:1em;
+	font-size:1.1em;
 	.toggle-links {
 		float:right;
 	}
@@ -32,6 +33,7 @@
 	button {
 		@include color_hover($white, $yellow);
 		@include flex;
+		margin:5px;
 		display:inline-flex;
 		&.open {
 			@include node("\f0d7", block);
@@ -41,9 +43,12 @@
 		}
 	}
 	.node>.node{
-		margin-left:2.5%;
+		margin-left:3%;
 		&.closed {
 			display:none;
 		}
+	}
+	.node ul {
+		margin-left:1em;
 	}
 }

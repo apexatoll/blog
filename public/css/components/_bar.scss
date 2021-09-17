@@ -1,5 +1,5 @@
 .bar {
-	@include color($grey, $d-black);
+	@include color($grey, $dd-black);
 	@include flex(space-between);
 	@include pad(0.2em);
 	@include shadow;

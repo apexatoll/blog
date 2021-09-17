@@ -2,11 +2,11 @@ nav {
 	@include flex(space-between);
 	@include radius("bottom");
 	@include shadow;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	font-size:1.1em;
 	font-weight:bold;
 	button, a {
-		@include standout($grey, $d-black);
+		@include standout($grey, $dd-black);
 		text-align:center;
 		width:100%;
 		padding:0.1em;
@@ -18,15 +18,21 @@ nav {
 		}
 	}
 	.cancel {
-		@include standout($red, $d-black);
+		@include standout($red, $dd-black);
 	}
 	.submit {
-		@include standout($d-green, $d-black);
+		@include standout($d-green, $dd-black);
 	}
 }
 
 nav.main {
 	font-size:1.2em;
+	position:sticky;
+	button, a {
+	@include standout($grey, $d-black);
+
+	}
+	top:0;
 	.active {
 		@include before("~/", $blue);
 		color:$d-green;

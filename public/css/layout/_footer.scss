@@ -1,6 +1,6 @@
 footer {
-	@include color($grey, $black);
-	font-size:1.1em;
+	@include color($grey, $d-black);
+	font-size:1.15em;
 	width:100%;
 	position:fixed;
 	bottom:0;
@@ -15,21 +15,24 @@ footer input {
 	background:none;
 	margin:0;
 	min-width:25vw;
-	max-width:50vw;
+	max-width:30vw;
 }
 
 footer input[type="text"],
 footer input[type="password"] {
+	width:10vw;
 	max-width:200px;
 }
 
 footer button, footer a {
-	margin:0 0.5em;
+	@extend .barred--footer;
+	padding:0 0.5em;
+	margin:0 0.2em;
 	font-weight:bold;
 }
 
 footer .prompt {
-	margin-right:10px;
+	margin-right:20px;
 }
 
 footer .user {

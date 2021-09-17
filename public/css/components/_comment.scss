@@ -3,5 +3,9 @@
 	border-top:none;
 	.content {
 		@include radius("bottom");
+		background:$black;
+	}
+	.bar {
+		background:$d-black;
 	}
 }

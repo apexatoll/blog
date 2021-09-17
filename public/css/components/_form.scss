@@ -1,5 +1,5 @@
 input, textarea {
-	@include color($d-green, $d-black);
+	@include color($d-green, $dd-black);
 	padding:0.2em 0.5em;
 	margin:2px 0;
 	&::placeholder {
@@ -8,7 +8,7 @@ input, textarea {
 }
 
 textarea {
-	@include color($white, $d-black);
+	@include color($white, $dd-black);
 	resize:none;
 }
 

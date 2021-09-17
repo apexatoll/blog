@@ -14,3 +14,31 @@ button.submit {
 		color:$green;
 	}
 }
+
+
+@mixin barred-button($fg, $hov){
+	//button {
+	@include color_hover($fg, $hov);
+	border-left:solid 0.15em $fg;
+	&:hover {
+		border-color:$hov;
+	//}
+	}
+}
+
+
+button.barred, a.barred {
+	@include barred-button($cyan, $yellow);
+}
+
+button.barred--footer, a.barred--footer {
+	@include barred-button($grey, $yellow);
+}
+
+button.barred--footer.cancel {
+	@include barred-button($grey, $red);
+}
+
+button.barred--footer.submit {
+	@include barred-button($grey, $green);
+}

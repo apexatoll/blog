@@ -7,7 +7,7 @@
 	color:$fg;
 	&:hover {
 		color:$fg_hov;
-		transition:0.4s;
+		//transition:0.4s;
 	}
 }
 
@@ -20,7 +20,7 @@
 	@include color_hover_bg($fg, $fg_hov, $bg);
 	&:hover {
 		background:$bg_hov;
-		transition:0.4s;
+		//transition:0.4s;
 	}
 }
 
