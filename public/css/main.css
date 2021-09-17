@@ -525,12 +525,23 @@ footer form {
   box-shadow: 5px 5px 5px #05080a;
   color: #aaaaaa;
   background: #0e151b;
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 0.5em 2.5% 0.5em;
+  position: relative;
 }
 .post-preview h3 {
   font-size: 1.3em;
   padding: 0.2em 0;
+}
+.post-preview .bookmark {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #416481;
+  font-size: 1.2em;
+}
+.post-preview .bookmark:hover {
+  color: #cc4131;
 }
 
 .meta {

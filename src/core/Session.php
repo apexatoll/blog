@@ -1,10 +1,12 @@
 <?php namespace core;
 
 class Session {
-	public $id, $username, $type;
+	public $id, $username, $type, $bookmarks;
 	public function __construct(){
 		if(isset($_SESSION['id']))
 			$this->set();
+		$this->bookmarks = isset($this->bookmarks) ?
+			explode(", ", $this->bookmarks) : [];
 	}
 	public static function start($data){
 		self::end();

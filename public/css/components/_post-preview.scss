@@ -1,10 +1,18 @@
 .post-preview {
 	@include shadow;
 	@include color($white, $d-black);
-	margin:10px 0;
+	margin:20px 0;
 	@include pad(0.5em);
+	position:relative;
 	h3 {
 		font-size:1.3em;
 		padding:0.2em 0;
+	}
+	.bookmark {
+		position:absolute;
+		top:1em;
+		right:1em;
+		@include color_hover($ll-black, $red);
+		font-size:1.2em;
 	}
 }

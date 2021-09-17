@@ -1,9 +1,10 @@
+$base:#16222c;
 $l-black:#16222c;
-$ll-black:lighten($l-black, 25%);
-$black:darken($l-black, 3%);
-$d-black:darken($l-black, 5%);
-$dd-black:darken($l-black, 7%);
-$ddd-black:darken($l-black, 7.5%);
+$ll-black:lighten($base, 25%);
+$black:darken($base, 3%);
+$d-black:darken($base, 5%);
+$dd-black:darken($base, 7%);
+$ddd-black:darken($base, 7.5%);
 
 $cyan:#3db5e1;
 $yellow:#e39f31;

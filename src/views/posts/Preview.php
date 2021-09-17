@@ -16,4 +16,16 @@ class Preview extends \core\View {
 		preg_match("/<p>(.+?)<\/p>/", $this->html, $matches);
 		return $matches[0] ?? null;
 	}
+	protected function bookmark(){
+		if($this->session->logged_in())
+			return in_array($this->id, $this->session->bookmarks) ?
+				$this->bookmark_active():
+				$this->bookmark_inactive();
+	}
+	private function bookmark_active(){
+		return $this->icon_button("bookmark", "bookmark red");
+	}
+	private function bookmark_inactive(){
+		return $this->icon_button("bookmark", "bookmark");
+	}
 }
