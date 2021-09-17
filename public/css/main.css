@@ -730,7 +730,7 @@ footer form {
   margin-right: 2.5%;
 }
 .finder-tab.update {
-  color: #407c9a;
+  color: #416481;
   background: #090e13;
 }
 .finder-tab.update:hover {
@@ -740,7 +740,7 @@ footer form {
   background: #090e13;
 }
 .finder-tab.active {
-  color: #e39f31;
+  color: #c6851b;
   background: #0e151b;
 }
 
@@ -821,7 +821,7 @@ header h1 a:hover {
 
 footer {
   color: #407c9a;
-  background: #0e151b;
+  background: #0a1014;
   font-size: 1.15em;
   width: 100%;
   position: fixed;
