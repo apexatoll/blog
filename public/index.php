@@ -37,4 +37,6 @@ $r->post("/popups/confirm", "Popups#confirm");
 
 $r->post("/finders/show/:screen", "PostFinders#show");
 
+$r->post("/users/bookmark/:id", "Users#bookmark", "val_logged_in");
+
 $r->route();

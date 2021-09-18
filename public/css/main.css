@@ -546,6 +546,9 @@ footer form {
 .post-preview .bookmark:hover {
   color: #cc4131;
 }
+.post-preview .bookmark.active {
+  color: #cc4131;
+}
 
 .meta {
   font-size: 0.9em;

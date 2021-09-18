@@ -5,6 +5,9 @@ class Preview extends \core\View {
 	public function make(){
 		return $this->buffer_layout("preview");
 	}
+	protected function id(){
+		return $this->input("hidden", ["name"=>"id", "value"=>$this->id]);
+	}
 	protected function link(){
 		return $this->a($this->title, ["href"=>"/posts/$this->id"]);
 	}
@@ -23,7 +26,7 @@ class Preview extends \core\View {
 				$this->bookmark_inactive();
 	}
 	private function bookmark_active(){
-		return $this->icon_button("bookmark", "bookmark red");
+		return $this->icon_button("bookmark", "bookmark active");
 	}
 	private function bookmark_inactive(){
 		return $this->icon_button("bookmark", "bookmark");

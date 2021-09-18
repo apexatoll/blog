@@ -14,5 +14,8 @@
 		right:2.5%;
 		@include color_hover($ll-black, $red);
 		font-size:1.2em;
+		&.active {
+			color:$red;
+		}
 	}
 }

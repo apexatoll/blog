@@ -1,6 +1,7 @@
 import {Upload}  from "./Upload.js"
 import {Publish} from "./Publish.js"
 import {Delete}  from "./Delete.js"
+import {Bookmark} from "./Bookmark.js"
 
 $(document).ready(()=>{
 	$(document).on("click", ".post-new-submit", (e)=>{
@@ -23,5 +24,8 @@ $(document).ready(()=>{
 	})
 	$(document).on("click", ".posts-delete", (e)=>{
 		new Delete().confirm_delete()
+	})
+	$(document).on("click", ".bookmark", (e)=>{
+		new Bookmark(e).toggle();
 	})
 })
