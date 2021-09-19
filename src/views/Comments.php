@@ -1,6 +1,7 @@
 <?php namespace views;
 
-class Comments extends \core\ViewModel {
+class Comments extends \core\View {
+	use traits\ViewModel;
 	public function comments($post_id){
 		return join([
 			$this->div(["id"=>"comments"]),

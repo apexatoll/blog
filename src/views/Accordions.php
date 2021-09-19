@@ -1,6 +1,7 @@
 <?php namespace views;
 
-class Accordions extends \core\ViewModel {
+class Accordions extends \core\View {
+	use traits\ViewModel;
 	public function homepage(){
 		return $this->buffer_layout("accordion", [
 			"sections" => $this->homepage_sections()
