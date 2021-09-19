@@ -39,7 +39,7 @@ trait ClassParser {
 		return strtolower($this->to_plural());
 	}
 	protected function to_plural(){
-		if(in_array(strtolower($this->group), $this->unchanging()))
+		if(in_array($this->group, $this->unchanging()))
 			return $this->group;
 		else return preg_match("/y$/", $this->group) ?
 			preg_replace("/y$/", "ies", $this->group) :

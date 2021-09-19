@@ -7,6 +7,11 @@ class PostLists extends \core\Controller {
 	public function unpublished($params){
 		return $this->build($params, "/posts/unpublished", ["published"=>0]);
 	}
+	public function series($params){
+		$name = $params['title'];
+		unset($params['title']);
+		return $this->build($params, "/series/$name", ["series"=>$name], ["course_index"=>"asc"]);
+	}
 	private function build($params, $root, $where, $order=null){
 		$params = $this->model->input($params+[
 			"where"=>$where, 
