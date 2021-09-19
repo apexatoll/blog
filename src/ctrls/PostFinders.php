@@ -12,4 +12,8 @@ class PostFinders extends \core\Controller {
 		$tree = (new Archives)->published();
 		return $this->view->archives($tree);
 	}
+	public function series(){
+		$tree = (new Series)->tree_all();
+		return $this->view->series($tree);
+	}
 }

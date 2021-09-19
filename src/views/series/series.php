@@ -1,8 +1,9 @@
-<?=$this->box($title, "flush")?>
-<?=$md?>
-<?=$this->_box()?>
-<div class="bar bar-top">
-	<button>test</button>
+<?=$header?>
+
+<div class="finder">
+	<?=$this->box()?>
+	<?=$tree?>
+	<?=$this->_box()?>
 </div>
 
 <?=$list?>

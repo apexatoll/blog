@@ -6,4 +6,7 @@ class Series extends \core\Controller {
 		$series = $this->model->find(["title"=>$params['title']]);
 		$this->view->series($series + ["list"=>$list]);
 	}
+	public function tree_all(){
+		return $this->view->tree_all();
+	}
 }

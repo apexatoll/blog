@@ -25,8 +25,8 @@ class PostFinders extends \core\View {
 	private function bar_items(){
 		return [
 			"categories" => $this->icon("folder"),
-			"archives" =>  $this->icon("calendar"),
-			//"series" =>  $this->icon("book")
+			"archives"   =>  $this->icon("calendar"),
+			"series"     =>  $this->icon("book")
 		];
 	}
 }
