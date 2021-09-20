@@ -13,6 +13,11 @@ class Authorise extends Session {
 		if(!$this->is_admin())
 			$this->forbidden();
 	}
+	public function val_published($ctrl, $params){
+		$ctrl->model->load($params);
+		if(!$ctrl->model->is_public())
+			$this->val_admin();
+	}
 	private function forbidden(){
 		throw new errors\Forbidden;
 	}

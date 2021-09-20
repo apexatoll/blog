@@ -18,7 +18,7 @@ $r->get("/posts", "Posts#index");
 $r->get("/posts/new", "Posts#form_new", "val_can_post");
 $r->get("/posts/edit/:id", "Posts#form_edit");
 $r->get("/posts/unpublished", "Posts#unpublished", "val_admin");
-$r->get("/posts/:id", "Posts#view");
+$r->get("/posts/:id", "Posts#view", "val_published");
 
 $r->post("/posts/publish/:id", "posts\Publish#publish");
 $r->post("/posts/new/submit", "Posts#new", "val_can_post");
@@ -39,6 +39,6 @@ $r->post("/finders/show/:screen", "PostFinders#show");
 
 $r->post("/users/bookmark/:id", "Users#bookmark", "val_logged_in");
 
-$r->get("/series/:title", "Series#view");
+$r->get("/series/:title", "Series#view", "val_published");
 
 $r->route();

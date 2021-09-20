@@ -14,9 +14,10 @@ class Route extends Authorise {
 		return isset($this->uri);
 	}
 	public function execute($args){
-		$this->authorise();
+		$url_args = $this->build_args();
+		$this->authorise($url_args);
 		return call_user_func_array(
-			$this->action, [$this->build_args($args)]);
+			$this->action, [$args + $url_args]);
 	}
 	private function convert($path){
 		return sprintf("~^%s$~", $this->replace_keys($path));
@@ -35,9 +36,8 @@ class Route extends Authorise {
 	private function instantiate($ctrl){
 		return new (sprintf("\\%s\\%s", CTRL_NS, $ctrl));
 	}
-	private function build_args($args){
-		return $args + (
-			isset($this->keys) ? $this->extract_vars() : []);
+	private function build_args(){
+		return isset($this->keys) ? $this->extract_vars() : [];
 	}
 	private function extract_vars(){
 		preg_match($this->regex, $this->uri, $vars);
@@ -46,8 +46,8 @@ class Route extends Authorise {
 	private function make_assoc($vars){
 		return array_combine($this->keys, array_slice($vars, 1));
 	}
-	private function authorise(){
+	private function authorise($args){
 		if(isset($this->auth))
-			call_user_func([$this, $this->auth]);
+			call_user_func_array([$this, $this->auth], [$this->action[0], $args]);
 	}
 }
