@@ -9,7 +9,7 @@ export class Popup extends Validate {
 	}
 	show(){
 		this.post(this.show_url, null, (html)=>{
-			$("#window").append(html.message);
+			$("body").append(html.message);
 		})
 	}
 	bind(tag, callback){

@@ -6,6 +6,7 @@ import {Upload} from "./lib/Upload.js"
 import {Footer} from "./lib/Footer.js"
 import {Cursor} from "./lib/Cursor.js"
 import {Popup} from "./lib/Popup.js"
+import {PopupForm} from "./lib/PopupForm.js"
 import {Confirm} from "./lib/Confirm.js"
 import {PostFinder} from "./lib/PostFinder.js"
 

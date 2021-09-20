@@ -34,10 +34,12 @@ $r->post("/comments/edit/show", "Comments#show_edit");
 $r->post("/comments/edit/submit", "Comments#edit");
 
 $r->post("/popups/confirm", "Popups#confirm");
+$r->post("/popups/signup", "Popups#signup");
 
 $r->post("/finders/show/:screen", "PostFinders#show");
 
 $r->post("/users/bookmark/:id", "Users#bookmark", "val_logged_in");
+$r->post("/users/register", "Users#register");
 
 $r->get("/series/:title", "Series#view", "val_published");
 
