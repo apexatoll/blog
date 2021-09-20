@@ -19,13 +19,15 @@ class Post extends \core\Validate {
 	protected function new_rules(){
 		return [
 			self::RULE_REQ  => ["title","categories","tags","md"],
-			self::RULE_REF  => ["refs"=>"refs","field"=>"images"]
+			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
+			self::RULE_TAGS => ["title", "md", "categories", "tags", "series", "subtitle"]
 		];
 	}
 	protected function edit_rules(){
 		return [
 			self::RULE_REQ  => ["title","categories","tags","md"],
-			self::RULE_REF  => ["refs"=>"refs","field"=>"images"]
+			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
+			self::RULE_TAGS => ["title", "md", "categories", "tags", "series", "subtitle"]
 		];
 	}
 	protected function input_new(){

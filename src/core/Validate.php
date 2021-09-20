@@ -6,6 +6,7 @@ abstract class Validate extends Model {
 	protected const RULE_MATCH = "val_match";
 	protected const RULE_UNIQ  = "val_uniq";
 	protected const RULE_REF   = "val_refs";
+	protected const RULE_TAGS = "val_tags";
 	abstract protected function new_rules();
 	public function validate(){
 		foreach($this->get_rules() as $rule => $params)
@@ -43,6 +44,11 @@ abstract class Validate extends Model {
 				!in_array($ref, $this->get_files($params['field'])))
 				$this->error("file $ref not found");
 		}
+	}
+	private function val_tags($keys){
+		foreach($this->get_props($keys) as $key=>$val)
+			if($val != strip_tags($val))
+				$this->error("$key contains html tags");
 	}
 	protected function get_files($field){
 		return array_map(fn($file)=>$file->name, $this->get_prop($field));
