@@ -51,4 +51,13 @@ class Series extends Posts {
 	protected function series_header($series){
 		return $this->subclass("Header", $series)->make();
 	}
+	public function sort($series){
+		$this->page_from_file("sort", "reorder posts", "posts", [
+			"series" => $series, 
+			"posts"  => $this->get_posts($series['title'])
+		]);
+	}
+	protected function buffer_reorder_item($post){
+		return $this->buffer_layout("sort-item", $post);
+	}
 }

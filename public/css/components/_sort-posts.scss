@@ -1,0 +1,9 @@
+.sortable-post {
+	@include color_hover_bg($grey, $yellow, $dd-black);
+	padding:0.2em 0.5em;
+	background:$dd-black;
+	@include flex(space-between);
+	.fas {
+		font-size:0.8em;
+	}
+}

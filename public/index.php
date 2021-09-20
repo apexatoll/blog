@@ -41,6 +41,9 @@ $r->post("/finders/show/:screen", "PostFinders#show");
 $r->post("/users/bookmark/:id", "Users#bookmark", "val_logged_in");
 $r->post("/users/register", "Users#register");
 
+$r->get("/series/sort/:id", "Series#show_sort");
 $r->get("/series/:title", "Series#view", "val_published");
+
+$r->post("/series/sort/submit/:id", "Series#sort");
 
 $r->route();
