@@ -73,6 +73,6 @@ class Header extends Preview {
 		return preg_replace("/[\s]/", "+", $term);
 	}
 	protected function share(){
-		return (new \views\posts\SocialMedia)->build();
+		return $this->subclass("SocialMedia", ["id"=>$this->id, "title"=>$this->title], "posts")->build();
 	}
 }
