@@ -15,6 +15,8 @@ class Route extends Authorise {
 	}
 	public function execute($args){
 		$url_args = $this->build_args();
+		foreach($url_args as $key => $val) 
+			$url_args[$key] = preg_replace("/-/", " ", $val);
 		$this->authorise($url_args);
 		return call_user_func_array(
 			$this->action, [$args + $url_args]);

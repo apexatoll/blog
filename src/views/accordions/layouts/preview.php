@@ -4,5 +4,4 @@
 		<?=$this->date()?>
 		<?=$this->user()?>
 	</div>
-	<?=$this->blurb()?>
 </div>
