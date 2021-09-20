@@ -3,14 +3,15 @@
 	<div class="content">
 		<div class="post-response"></div>
 			<?=$this->unpublished()?>
+			<?=$this->subtitle()?>
 			<div class="meta meta-post-header">
-					<?=$this->user()?>
-					<?=$this->tags()?>
-					<?=$this->date()?>
-					<?=$this->categories()?>
-					<?=$this->views()?>
-					<?=$this->comments()?>
-					<?//=$this->series()?>
+				<?=$this->user()?>
+				<?=$this->tags()?>
+				<?=$this->date()?>
+				<?=$this->categories()?>
+				<?=$this->views()?>
+				<?=$this->comments()?>
+				<?//=$this->series()?>
 			</div>
 	</div>
 	<div class="bar bar-bottom">

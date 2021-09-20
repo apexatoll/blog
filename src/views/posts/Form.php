@@ -26,6 +26,9 @@ class Form extends \core\View {
 	protected function tags(){
 		return $this->make_input("tags");
 	}
+	protected function subtitle(){
+		return $this->make_input("subtitle");
+	}
 	protected function series(){
 		return $this->make_input("series");
 	}

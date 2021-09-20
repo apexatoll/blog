@@ -8,11 +8,12 @@ class Post extends \core\Validate {
 	protected $categories, $tags, $series, $viewcount;
 	protected $commentcount, $images, $published;
 	protected $course_index;
+	protected $subtitle;
 	protected function columns(): array {
 		return [
 			"title", "md", "html", "author", "posted", 
 			"categories", "tags", "series", "viewcount", 
-			"commentcount", "published", "course_index"
+			"commentcount", "published", "course_index", "subtitle"
 		];
 	}
 	protected function new_rules(){
