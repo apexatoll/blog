@@ -32,6 +32,7 @@ class Series extends Posts {
 		$this->node(
 			$title['title'], 
 			$this->get_posts($title['title']), 
+			"open", "ol"
 		);
 		echo $this->_div();
 		echo $this->_div();
@@ -48,7 +49,6 @@ class Series extends Posts {
 		);
 	}
 	protected function series_header($series){
-		//print_r($series);
 		return $this->subclass("Header", $series)->make();
 	}
 }

@@ -668,6 +668,10 @@ footer form {
 .tree .node ul {
   margin-left: 0.6em;
 }
+.tree .node ol {
+  margin-top: 5px;
+  margin-left: 1.2em;
+}
 
 .post-form {
   display: flex;
