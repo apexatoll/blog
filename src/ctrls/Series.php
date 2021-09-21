@@ -14,13 +14,16 @@ class Series extends \core\Controller {
 		$this->view->sort($series);
 	}
 	public function sort($params){
-		//print_r($params);
 		foreach($params['order'] as $i => $id)
 			$this->model->set_order($id, $i);
 		return "order set";
 	}
 	public function show_edit($params){
-		$series = $this->model->find(["id"=>$params['id']]);
-		$this->view->edit($series);
+		$this->model->load(["id"=>$params['id']]);
+		$this->view->edit($this->model->build_with_images());
+	}
+	public function edit($series){
+		$this->model->input($series)->validate()->save();
+		return ["series updated", ["title"=>$series['title']]];
 	}
 }

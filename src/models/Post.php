@@ -20,14 +20,14 @@ class Post extends \core\Validate {
 		return [
 			self::RULE_REQ  => ["title","categories","tags","md"],
 			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
-			self::RULE_TAGS => ["title", "md", "categories", "tags", "series", "subtitle"]
+			self::RULE_TAGS => ["title", "categories", "tags", "series", "subtitle"]
 		];
 	}
 	protected function edit_rules(){
 		return [
 			self::RULE_REQ  => ["title","categories","tags","md"],
 			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
-			self::RULE_TAGS => ["title", "md", "categories", "tags", "series", "subtitle"]
+			self::RULE_TAGS => ["title", "categories", "tags", "series", "subtitle"]
 		];
 	}
 	protected function input_new(){
@@ -54,10 +54,10 @@ class Post extends \core\Validate {
 	public function build_with_images(){
 		return $this->build_with_id() + ["images"=>$this->images];
 	}
-	private function file_dir(): object {
+	protected function file_dir(): object {
 		return new PostDir($this->dir_name());
 	}
-	private function dir_name(): string {
+	protected function dir_name(): string {
 		return str_pad($this->id, 4, "0", STR_PAD_LEFT);
 	}
 	protected function insert($values){
