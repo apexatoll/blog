@@ -8,7 +8,8 @@ class PostLists extends \core\Controller {
 		return $this->build($params, "/posts/unpublished", ["published"=>0]);
 	}
 	public function series($params){
-		return $this->build($params, "/series/".$params['title'], ["series"=>$params['title']], ["course_index"=>"ASC"]);
+		$published = $this->session->is_admin() ? [] : ["published"=>1];
+		return $this->build($params, "/series/".$params['title'], ["series"=>$params['title']] + $published, ["course_index"=>"ASC"]);
 	}
 	private function build($params, $root, $where, $order=null){
 		$params = $this->model->input($params+[

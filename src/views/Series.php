@@ -43,9 +43,10 @@ class Series extends Posts {
 		return $this->posts;
 	}
 	private function get_posts($title){
+		$published = $this->session->is_admin() ?
+			[] : ["published"=>1];
 		return $this->posts()->find_all(
-			//["series"=>$title, "published"=>1], 
-			["series"=>$title], 
+			["series"=>$title] + $published, 
 			["order"=>["course_index"=>"asc"]]
 		);
 	}
