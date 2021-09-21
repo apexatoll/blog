@@ -19,9 +19,11 @@ class Series extends Posts {
 		echo $this->div("tree");
 		foreach($this->model->published() as $series){
 			$this->node(
-				$series['title'].
-				$this->span($this->icon_a("caret-square-right", "/series/".$series['title']), ["class"=>"read-more"]),
-				$this->get_posts($series['title'])
+				$series['title'],//.,
+				//$this->span($this->icon_a("caret-square-right", "/series/".preg_replace("/ /", "-",$series['title'])), ["class"=>"read-more"]),
+				$this->get_posts($series['title']),
+				"closed", "ul",
+				$this->span($this->icon_a("caret-square-right", "/series/".preg_replace("/ /", "-",$series['title'])), ["class"=>"read-more"])
 			);
 			echo $this->_div();
 		}
