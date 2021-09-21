@@ -60,4 +60,7 @@ class Series extends Posts {
 	protected function buffer_reorder_item($post){
 		return $this->buffer_layout("sort-item", $post);
 	}
+	public function edit($series){
+		$this->page_from_str($this->subclass("Form", $series)->edit(), "edit series");
+	}
 }

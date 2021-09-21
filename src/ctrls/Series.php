@@ -19,4 +19,8 @@ class Series extends \core\Controller {
 			$this->model->set_order($id, $i);
 		return "order set";
 	}
+	public function show_edit($params){
+		$series = $this->model->find(["id"=>$params['id']]);
+		$this->view->edit($series);
+	}
 }

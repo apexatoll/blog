@@ -41,7 +41,7 @@ class Form extends \core\View {
 		]);
 	}
 	public function images(){
-		return $this->buffer_layout("images", [
+		return $this->buffer_global("images", [
 			"images" => $this->buffer_images()
 		]);
 	}
@@ -69,7 +69,7 @@ class Form extends \core\View {
 	}
 	private function buffer_images(){
 		foreach($this->images??[] as $img)
-			$buff[]= $this->buffer_layout("image", [
+			$buff[]= $this->buffer_global("image", [
 				"name" => $img->name,
 				"path" => $img->rel_path()
 			]);
