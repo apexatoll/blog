@@ -2,10 +2,6 @@
 	<div class="response"></div>
 	<form id="<?=$form_id?>" class="post-form">
 		<?=$this->title()?>
-		<?=$this->subtitle()?>
-		<?=$this->categories()?>
-		<?=$this->tags()?>
-		<?=$this->series()?>
 		<?=$this->md()?>
 		<?=$this->file()?>
 	</form>

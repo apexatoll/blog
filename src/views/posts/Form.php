@@ -26,6 +26,9 @@ class Form extends \core\View {
 	protected function tags(){
 		return $this->make_input("tags");
 	}
+	protected function subtitle(){
+		return $this->make_input("subtitle");
+	}
 	protected function series(){
 		return $this->make_input("series");
 	}
@@ -38,7 +41,7 @@ class Form extends \core\View {
 		]);
 	}
 	public function images(){
-		return $this->buffer_layout("images", [
+		return $this->buffer_global("images", [
 			"images" => $this->buffer_images()
 		]);
 	}
@@ -66,7 +69,7 @@ class Form extends \core\View {
 	}
 	private function buffer_images(){
 		foreach($this->images??[] as $img)
-			$buff[]= $this->buffer_layout("image", [
+			$buff[]= $this->buffer_global("image", [
 				"name" => $img->name,
 				"path" => $img->rel_path()
 			]);

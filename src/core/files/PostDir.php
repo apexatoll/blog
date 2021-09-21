@@ -14,6 +14,6 @@ class PostDir extends Dir {
 		$temp->close();
 	}
 	public function rel_path(){
-		return sprintf("%s/%s", POST_DIR, $this->id);
+		return sprintf("%s/posts/%s", POST_DIR, $this->id);
 	}
 }

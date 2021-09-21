@@ -5,12 +5,13 @@ trait Trees {
 		$this->posts ??= new \models\Post;
 		return $this->posts;
 	}
-	protected function node($text, $posts, $class="closed", $type="ul"){
+	protected function node($text, $posts, $class="closed", $type="ul", $home_button=null){
 		$this->render_global("node", [
 			"class" => $class,
 			"posts" => iterator_to_array($this->make_list($posts)),
 			"link_button" => $this->link_button(count($posts), $class),
 			"node_button" => $this->node_button($text, $class),
+			"home_button" => $home_button,
 			"type" => $type
 		]);
 	}

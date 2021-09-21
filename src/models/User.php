@@ -1,9 +1,27 @@
 <?php namespace models;
 
-class User extends \core\Model {
+class User extends \core\Validate {
 	protected $id, $name, $username, $email, $password, $confirm, $bookmarks;
 	protected function columns(){
 		return ["name", "username", "email", "password", "bookmarks"];
+	}
+	protected function new_rules(): array {
+		return [
+			self::RULE_REQ => [
+				"name", "username", "email", 
+				"password", "confirm" ],
+			self::RULE_EMAIL => ["email"],
+			self::RULE_MATCH => [
+				"passwords" =>["password", "confirm"] ],
+			self::RULE_UNIQ => ["username", "email"]
+		];
+	}
+	protected function insert($values){
+		$values['password']= $this->hash($values['password']);
+		return parent::insert($values);
+	}
+	private function hash($password){
+		return password_hash($password, PASSWORD_DEFAULT);
 	}
 	public function set($params){
 		parent::set($params);

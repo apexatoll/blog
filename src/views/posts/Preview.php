@@ -12,8 +12,8 @@ class Preview extends \core\View {
 		return $this->a($this->title, ["href"=>"/posts/$this->id"]);
 	}
 	protected function series(){
-		if(isset($this->series))
-			return $this->icon_div("book", $this->a($this->series,["href"=>"/series/$this->series"])) ;
+		if(isset($this->series) && ($this->series_published() || $this->session->is_admin()))
+			return $this->icon_div("book", $this->a($this->series,["href"=>"/series/".strtolower(preg_replace("/ /", "-", $this->series))])) ;
 	}
 	protected function blurb(){
 		preg_match("/<p>(.+?)<\/p>/", $this->html, $matches);
@@ -30,5 +30,8 @@ class Preview extends \core\View {
 	}
 	private function bookmark_inactive(){
 		return $this->icon_button("bookmark", "bookmark");
+	}
+	private function series_published(){
+		return (new \models\Series)->load(["title"=>$this->series])->is_public();
 	}
 }

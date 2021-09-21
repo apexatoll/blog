@@ -32,7 +32,7 @@ abstract class Dir {
 		return new ($this->file_class())(
 			$name, $this->path());
 	}
-	private function file_class(){
+	protected function file_class(){
 		return preg_replace("/Dir/", "File", get_class($this));
 	}
 }

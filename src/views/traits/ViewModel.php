@@ -1,8 +1,7 @@
-<?php namespace core;
+<?php namespace views\traits;
 
-class ViewModel extends View {
-	use traits\ObjectMaker;
-	protected const NS = VIEW_NS;
+trait ViewModel {
+	use \core\traits\ObjectMaker;
 	public function __construct(){
 		parent::__construct();
 		$this->m_cls = $this->to_singular();

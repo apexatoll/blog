@@ -11,6 +11,7 @@ class PostList extends \core\Model {
 		];
 	}
 	protected function input_new(){
+		$this->root = preg_replace("/ /", "-", $this->root);
 		$this->set_page_params();
 		isset($this->search) ?
 			$this->build_search():

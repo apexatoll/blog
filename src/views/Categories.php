@@ -1,7 +1,8 @@
 <?php namespace views;
 
-class Categories extends \core\ViewModel {
+class Categories extends \core\View {
 	use traits\Trees;
+	use traits\ViewModel;
 	public function tree(){
 		return $this->buffer_method("build", "ROOT");
 	}

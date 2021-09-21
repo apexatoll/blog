@@ -2,8 +2,9 @@
 
 use \DateTime as Date;
 
-class Archives extends \core\ViewModel {
+class Archives extends \core\View {
 	use traits\Trees;
+	use traits\ViewModel;
 	public function tree($where){
 		return join([
 			$this->div("tree"),
@@ -11,11 +12,6 @@ class Archives extends \core\ViewModel {
 			$this->_div()
 		]);
 	}
-	//protected function build($where){
-		//$this->div(["class"=>"tree"]);
-		//$this->year_nodes($where);
-		//$this->_div();
-	//}
 	protected function year_nodes($where){
 		foreach($this->model->get_years($where) as $year){
 			$this->make_node($where, $year);

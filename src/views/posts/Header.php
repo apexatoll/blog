@@ -1,13 +1,23 @@
 <?php namespace views\posts;
 
 class Header extends Preview {
-	protected $categories, $tags, $comment_count, $viewcount, $published, $author;
+	protected $categories, $tags, $comment_count, $viewcount, $published, $author, $subtitle;
 	public function __construct($params=[]){
 		parent::__construct($params);
 		$this->class = strtolower($this->group);
 	}
 	public function make(){
 		return $this->buffer_layout("header");
+	}
+	protected function subtitle(){
+		if(isset($this->subtitle))
+			return join([
+				$this->div("subtitle"),
+				$this->icon("quote-left"),
+				$this->subtitle,
+				$this->icon("quote-right"),
+				$this->_div()
+			]);
 	}
 	protected function unpublished(){
 		if(!$this->published)
@@ -63,6 +73,6 @@ class Header extends Preview {
 		return preg_replace("/[\s]/", "+", $term);
 	}
 	protected function share(){
-		return (new \views\posts\SocialMedia)->build();
+		return $this->subclass("SocialMedia", ["id"=>$this->id, "title"=>$this->title], "posts")->build();
 	}
 }
