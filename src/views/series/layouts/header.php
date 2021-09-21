@@ -1,5 +1,5 @@
 <div class="box">
-	<h2><?=$this->title?></h2>
+	<h2><?=ucwords($this->title)?></h2>
 	<div class="content">
 		<?=$this->unpublished()?>
 		<?=$this->html?>
