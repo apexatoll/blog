@@ -13,7 +13,7 @@ class Preview extends \core\View {
 	}
 	protected function series(){
 		if(isset($this->series) && ($this->series_published() || $this->session->is_admin()))
-			return $this->icon_div("book", $this->a($this->series,["href"=>"/series/".strtolower(preg_replace("/ /", "-", $this->series))])) ;
+			return $this->icon_div("book", $this->a(strtolower($this->series),["href"=>"/series/".strtolower(preg_replace("/ /", "-", $this->series))])) ;
 	}
 	protected function blurb(){
 		preg_match("/<p>(.+?)<\/p>/", $this->html, $matches);

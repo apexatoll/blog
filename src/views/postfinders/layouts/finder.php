@@ -1,4 +1,4 @@
-<div class="finder">
+<div class="finder flush">
 	<div class="bar top">
 		<?=$bar?>
 	</div>

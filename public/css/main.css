@@ -314,6 +314,7 @@ nav .submit:hover {
 nav.main {
   font-size: 1.2em;
   position: sticky;
+  z-index: 10;
   top: 0;
 }
 nav.main button, nav.main a {
@@ -428,6 +429,12 @@ footer form {
   font-size: 0.9em;
   color: #aaaaaa;
   font-weight: bold;
+}
+.list-bar select {
+  color: #3db5e1;
+  background: #0a1014;
+  font-size: 1em;
+  border: none;
 }
 .list-bar .elements {
   display: flex;
@@ -673,6 +680,10 @@ footer form {
   margin-left: 1.2em;
 }
 
+.node.accordion {
+  margin-left: 1.6em;
+}
+
 .post-form {
   display: flex;
   justify-content: center;
@@ -721,8 +732,8 @@ footer form {
 }
 
 .finder .box {
+  border-radius: 10px;
   margin-top: 0;
-  border-radius: 10px 10px 0 0;
   margin-bottom: 0;
   padding: 0;
 }
@@ -756,6 +767,10 @@ footer form {
 .finder-tab.active {
   color: #c6851b;
   background: #111a22;
+}
+
+.finder.flush .box {
+  border-radius: 10px 10px 0 0;
 }
 
 .image-card {

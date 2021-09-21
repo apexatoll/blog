@@ -1,6 +1,6 @@
 <?=$header?>
 
-<div class="finder">
+<div class="finder flush">
 	<?=$this->box()?>
 	<?=$tree?>
 	<?=$this->_box()?>

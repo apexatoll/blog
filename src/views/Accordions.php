@@ -9,8 +9,8 @@ class Accordions extends \core\View {
 	}
 	private function homepage_sections(){
 		return [
-			"Recents" => $this->model->recents(),
-			"Popular" => $this->model->popular()
+			"Recent posts" => $this->model->recents(),
+			"Popular posts" => $this->model->popular()
 		];
 	}
 	protected function section($title, $posts){

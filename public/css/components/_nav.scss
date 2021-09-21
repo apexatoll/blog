@@ -28,9 +28,9 @@ nav {
 nav.main {
 	font-size:1.2em;
 	position:sticky;
+	z-index:10;
 	button, a {
-	@include standout($grey, $d-black);
-
+		@include standout($grey, $d-black);
 	}
 	top:0;
 	.active {

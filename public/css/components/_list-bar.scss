@@ -1,4 +1,9 @@
 .list-bar {
+	select {
+		@include color($cyan, $dd-black);
+		font-size:1em;
+		border:none;
+	}
 	background:$d-black;
 	padding:0.5em 0;
 	position:relative;
