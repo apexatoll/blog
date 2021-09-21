@@ -4,6 +4,8 @@ class Series extends \core\Controller {
 	public function view($params){
 		$list = (new PostLists)->series($params);
 		$series = $this->model->find(["title"=>$params['title']]);
+		if(!$series)
+			$this->redirect_not_found();
 		$this->view->series($series + ["list"=>$list]);
 	}
 	public function tree_all(){

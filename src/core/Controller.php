@@ -18,4 +18,7 @@ class Controller {
 		$this->m_cls = $this->to_singular();
 		$this->v_cls = $this->group;
 	}
+	protected function redirect_not_found(){
+		throw new \core\errors\NotFound(null);
+	}
 }
