@@ -8,7 +8,9 @@ class Pages extends \core\Controller {
 		$this->view->page_from_file("about");
 	}
 	public function contact(){
-		$this->view->page_from_file("contact");
+		$name = $this->session->logged_in() ?
+			$this->session->name : null;
+		$this->view->page_from_file("contact", "contact", "contact", ["name"=>$name]);
 	}
 	public function not_found($uri){
 		$this->view->page_from_file("_404", "404", null, ["uri"=>$uri]);

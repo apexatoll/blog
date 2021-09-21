@@ -1,3 +1,13 @@
-<?=$this->box("Contact")?>
-<p>Adipisicing error aut nobis nesciunt aliquid modi Maiores eius impedit sint asperiores eligendi Nisi reprehenderit itaque dolorem nulla incidunt aperiam cupiditate, quo? Expedita incidunt minima pariatur quidem nam! Rem adipisci</p>
+<?=$this->box("Contact", "flush")?>
+<div class="contact-response"></div>
+<form id="contact-form">
+	<input type="text" name="name" placeholder="Enter name..." value="<?=$name?>">
+	<input type="text" name="email" placeholder="Enter email...">
+	<input type="text" name="subject" placeholder="Enter subject...">
+	<textarea name="body" rows="5" placeholder="Enter message..."></textarea>
+</form>
 <?=$this->_box()?>
+<nav>
+	<button class="contact-clear cancel">clear</button>
+	<button class="contact-submit submit">submit</button>
+</nav>

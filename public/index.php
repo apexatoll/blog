@@ -54,4 +54,6 @@ $r->post("/series/edit/submit/:id", "Series#edit");
 
 $r->get("/series/:title", "Series#view");
 
+$r->post("/contact/submit", "Contacts#submit");
+
 $r->route();

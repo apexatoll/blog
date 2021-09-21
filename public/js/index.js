@@ -9,6 +9,7 @@ import {Popup} from "./lib/Popup.js"
 import {PopupForm} from "./lib/PopupForm.js"
 import {Confirm} from "./lib/Confirm.js"
 import {PostFinder} from "./lib/PostFinder.js"
+import {Contact} from "./lib/Contact.js"
 
 import * as Comments from "./lib/comments/import.js"
 import * as Posts from "./lib/posts/import.js"
@@ -25,5 +26,4 @@ $(document).ready(()=>{
 		e.preventDefault();
 		window.history.back()
 	})
-	//$(".sort-posts").sortable();
 })

@@ -19,5 +19,7 @@ define("PAGE_DIR", "pages");
 define("TMP_DIR", SRC."/tmp");
 define("POST_DIR", "/files");
 
+define("CONTACT", "welhamm@gmail.com");
+
 foreach(["css", "js"] as $file)
 	require_once(__DIR__."/$file.php");
