@@ -31,23 +31,17 @@ class Post extends \core\Validate {
 		];
 	}
 	protected function input_new(){
-		//$this->val_can_post();
 		$this->set_files();
 		$this->handle_markdown();
 		$this->set_meta();
 	}
 	protected function input_edit(){
-		//$this->val_is_author($this->author);
-		//echo "edit method";
-		//print_r($this->files);
 		$this->set_files();
 		$this->handle_markdown();
 		$this->update_posted();
 	}
 	public function load($where=null, $opts=[]){
 		parent::load($where, $opts);
-		//if($this->published == 0)
-			//$this->validate_admin();
 		$this->set_files();
 		return $this;
 	}
@@ -105,8 +99,6 @@ class Post extends \core\Validate {
 	}
 	public function delete_file($file){
 		$this->file_dir()->find($file)->delete();
-		//echo "delete file method";
-		//print_r($this->files);
 		return $this;
 	}
 	public function index_posts($params){
