@@ -24,8 +24,15 @@ class Series extends \core\Controller {
 		$this->model->load(["id"=>$params['id']]);
 		$this->view->edit($this->model->build_with_images());
 	}
+	public function show_new(){
+		$this->view->new();
+	}
 	public function edit($series){
 		$this->model->input($series)->validate()->save();
 		return ["series updated", ["title"=>$series['title']]];
+	}
+	public function new($series){
+		$this->model->input($series)->validate()->save();
+		return ["series submitted", ["title"=>$series['title']]];
 	}
 }

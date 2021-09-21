@@ -7,7 +7,6 @@ export class Upload extends BaseUpload {
 	}
 	new(){
 		this.post("/series/new/submit")
-		console.log("called");
 	}
 	edit(){
 		this.post(`/series/edit/submit/${this.url_id()}`);

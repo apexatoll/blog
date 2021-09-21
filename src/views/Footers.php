@@ -13,6 +13,10 @@ class Footers extends \core\View {
 		if($this->session->can_post())
 			return $this->a("new", "/posts/new");
 	}
+	//protected function new_series(){
+		//if($this->session->can_post())
+			//return $this->a("new", "/posts/new");
+	//}
 	protected function upload(){
 		if($this->session->can_post())
 			return $this->button("upload", "footer-show-upload");

@@ -7,7 +7,8 @@ class Series extends Post {
 		return [
 			self::RULE_REQ  => ["title","md"],
 			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
-			self::RULE_TAGS => ["title", "md"]
+			self::RULE_TAGS => ["title", "md"],
+			self::RULE_UNIQ => ["title"]
 		];
 	}
 	protected function edit_rules(){
@@ -16,6 +17,10 @@ class Series extends Post {
 			self::RULE_REF  => ["refs"=>"refs","field"=>"images"],
 			self::RULE_TAGS => ["title", "md"]
 		];
+	}
+	protected function input_new(){
+		$this->set_files();
+		$this->handle_markdown();
 	}
 	protected function input_edit(){
 		$this->set_files();

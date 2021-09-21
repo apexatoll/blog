@@ -19,8 +19,7 @@ class Series extends Posts {
 		echo $this->div("tree");
 		foreach($this->model->published() as $series){
 			$this->node(
-				$series['title'],//.,
-				//$this->span($this->icon_a("caret-square-right", "/series/".preg_replace("/ /", "-",$series['title'])), ["class"=>"read-more"]),
+				$series['title'],
 				$this->get_posts($series['title']),
 				"closed", "ul",
 				$this->span($this->icon_a("caret-square-right", "/series/".preg_replace("/ /", "-",$series['title'])), ["class"=>"read-more"])
@@ -64,5 +63,8 @@ class Series extends Posts {
 	}
 	public function edit($series){
 		$this->page_from_str($this->subclass("Form", $series)->edit(), "edit series");
+	}
+	public function new(){
+		$this->page_from_str($this->subclass("Form")->new(), "new series");
 	}
 }

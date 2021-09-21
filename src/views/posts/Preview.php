@@ -12,7 +12,7 @@ class Preview extends \core\View {
 		return $this->a($this->title, ["href"=>"/posts/$this->id"]);
 	}
 	protected function series(){
-		if(isset($this->series) && $this->series_published())
+		if(isset($this->series) && ($this->series_published() || $this->session->is_admin()))
 			return $this->icon_div("book", $this->a($this->series,["href"=>"/series/".strtolower(preg_replace("/ /", "-", $this->series))])) ;
 	}
 	protected function blurb(){

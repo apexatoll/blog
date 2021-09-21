@@ -11,4 +11,8 @@ $(document).ready(()=>{
 		e.preventDefault();
 		new Upload("#edit-series").edit();
 	})
+	$(document).on("click", ".series-new-submit", (e)=>{
+		e.preventDefault();
+		new Upload("#new-series").new();
+	})
 })
