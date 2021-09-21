@@ -35,4 +35,12 @@ class Series extends \core\Controller {
 		$this->model->input($series)->validate()->save();
 		return ["series submitted", ["title"=>$series['title']]];
 	}
+	public function publish($params){
+		$this->model->load(["id"=>$params['id']])->publish();
+		return "series published";
+	}
+	public function unpublish($params){
+		$this->model->load(["id"=>$params['id']])->unpublish();
+		return "series unpublished";
+	}
 }

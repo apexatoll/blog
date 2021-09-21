@@ -1,6 +1,7 @@
 <div class="box">
 	<h2><?=ucwords($this->title)?></h2>
 	<div class="content">
+		<input type="hidden" id="series-id" value="<?=$this->id?>">
 		<?=$this->unpublished()?>
 		<?=$this->html?>
 	</div>

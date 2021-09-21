@@ -47,6 +47,8 @@ $r->get("/series/edit/:id", "Series#show_edit");
 $r->get("/series/:title", "Series#view", "val_published");
 
 $r->post("/series/new/submit", "Series#new");
+$r->post("/series/publish/:id", "Series#publish");
+$r->post("/series/unpublish/:id", "Series#unpublish");
 $r->post("/series/sort/submit/:id", "Series#sort");
 $r->post("/series/edit/submit/:id", "Series#edit");
 

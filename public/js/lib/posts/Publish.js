@@ -10,6 +10,9 @@ export class Publish extends Validate {
 	unpublish(){
 		this.post_redirect(`/posts/unpublish/${this.url_id()}`)
 	}
+	id(){
+		return $("#series-id").val()
+	}
 }
 //$(document).ready(()=>{
 	//$(document).on("click", ".posts-publish", (e)=>{
