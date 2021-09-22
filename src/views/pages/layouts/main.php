@@ -8,6 +8,10 @@
 	<?=$this->scripts()?>
 </head>
 <body>
+		<div class="burger-menu">
+			<h3><span class="blue">$</span> bristol code</h3>
+			<?=$this->icon_button("bars")?>
+		</div>
 	<main>
 		<?=$this->header($active)?>
 		<?=$content?>
