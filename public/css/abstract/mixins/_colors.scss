@@ -5,13 +5,16 @@
 
 @mixin fg_hover($fg, $hov){
 	color:$fg;
+	border-color:$fg;
 	&:hover {
 		color:$hov;
+		border-color:$hov;
 	}
 }
 
 @mixin bg_hover($bg, $hov){
 	background:$bg;
+	border-radius:inherit;
 	&:hover {
 		background:$hov;
 	}

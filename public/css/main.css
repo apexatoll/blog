@@ -4,4 +4,241 @@
   padding: 0;
 }
 
+html {
+  color: #cccccc;
+  background: #080d11;
+}
+
+a {
+  color: #3db5e1;
+  border-color: #3db5e1;
+  text-decoration: none;
+}
+a:hover {
+  color: #e39f31;
+  border-color: #e39f31;
+}
+
+button {
+  color: #3db5e1;
+  border-color: #3db5e1;
+  background: none;
+  border-radius: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+}
+button:hover {
+  color: #e39f31;
+  border-color: #e39f31;
+}
+button:hover {
+  background: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  color: #34d58d;
+  background: #0a1014;
+  border: none;
+  font-size: 1em;
+  resize: none;
+  margin: 2px 0;
+  padding: 0.2em 0.5em;
+}
+input::placeholder, textarea::placeholder {
+  color: #16222c;
+}
+
+p {
+  margin: 1em 0;
+}
+
+ul li {
+  margin: 2px 0 2px 1em;
+}
+
+ol li {
+  margin: 2px 0 2px 2em;
+}
+
+main {
+  width: 95%;
+  margin: 20px auto 40px;
+}
+
+.box {
+  margin: 20px 0;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: #cccccc;
+  background: #111a22;
+}
+.box h2 {
+  margin-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #407c9a;
+  background: #0a1014;
+  padding: 0 2.5vw;
+  font-size: 1.1em;
+}
+footer button, footer a {
+  color: #407c9a;
+  border-color: #407c9a;
+  padding: 0 0.5em;
+  border-left: solid 0.2em #407c9a;
+}
+footer button:hover, footer a:hover {
+  color: #e39f31;
+  border-color: #e39f31;
+}
+footer .prompt {
+  padding-right: 0.5em;
+}
+footer form {
+  display: inline;
+}
+footer form input {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #296dcf;
+}
+
+.tree {
+  background: #0a1014;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+*.flush {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+header h1 a {
+  color: #34d58d;
+  border-color: #34d58d;
+  background: #111a22;
+  border-radius: inherit;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  padding: 0.8em 2.5vw;
+}
+header h1 a:hover {
+  color: #e39f31;
+  border-color: #e39f31;
+}
+header h1 a:hover {
+  background: #111a22;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+nav a, nav button {
+  padding: 0.1em 0;
+  width: 100%;
+  color: #407c9a;
+  border-color: #407c9a;
+  background: #0e151b;
+  border-radius: inherit;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+nav a:hover, nav button:hover {
+  color: #0e151b;
+  border-color: #0e151b;
+}
+nav a:hover, nav button:hover {
+  background: #407c9a;
+}
+nav a:first-child, nav button:first-child {
+  border-bottom-left-radius: 8px;
+}
+nav a:last-child, nav button:last-child {
+  border-bottom-right-radius: 8px;
+}
+nav .active {
+  color: #15a084;
+}
+nav .active::before {
+  content: "~/";
+  color: #296dcf;
+}
+
+.blue {
+  color: #296dcf;
+}
+
+.grey {
+  color: #407c9a;
+}
+
+nav.main {
+  position: sticky;
+  top: 0;
+}
+
+article {
+  background: #0e151b;
+  padding: 1em 2.5vw;
+}
+
+code {
+  display: block;
+  overflow: scroll;
+  background: #0a1014;
+  color: #34d58d;
+  margin: 1em 0;
+  max-height: 40vh;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.meta {
+  font-size: 0.9em;
+}
+.meta .fas {
+  width: 1em;
+  text-align: center;
+  color: #407c9a;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 1em 0;
+  font-style: italic;
+}
+.subtitle .fas {
+  font-size: 0.6em;
+  vertical-align: top;
+}
+.subtitle .fas:first-of-type {
+  margin-right: 0.5em;
+}
+.subtitle .fas:last-of-type {
+  margin-left: 0.5em;
+}
+
+ul, ol {
+  margin: 1em 0;
+}
+
 /*# sourceMappingURL=main.css.map */

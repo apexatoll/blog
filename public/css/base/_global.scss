@@ -1,0 +1,194 @@
+html {
+	@include color($white, $ddd-black);
+}
+
+a {
+	@include fg_hover($cyan, $yellow);
+	text-decoration:none;
+}
+
+button {
+	@include color_hover($cyan, none, $yellow);
+	font-size:1em;
+	font-weight:bold;
+	border:none;
+}
+
+form {
+	display:flex;
+	flex-direction:column;
+}
+
+input, textarea {
+	@include color($green, $dd-black);
+	border:none;
+	font-size:1em;
+	resize:none;
+	&::placeholder {
+		color:$l-black;
+	}
+	margin:2px 0;
+	padding:0.2em 0.5em;
+}
+
+p {
+	margin:1em 0;
+}
+
+ul li {
+	margin:2px 0 2px 1em;
+}
+
+ol li {
+	margin:2px 0 2px 2em;
+}
+
+main {
+	width:95%;
+	margin:20px auto 40px;
+}
+
+.box {
+	margin:20px 0;
+	padding:0.5em 1em;
+	border-radius:$box-radius;
+	@include color($white, $black);
+	h2 {
+		margin-bottom:10px;
+	}
+}
+
+footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	@include color($grey, $dd-black);
+	padding:0 2.5vw;
+	font-size:1.1em;
+	button, a {
+		@include fg_hover($grey, $yellow);
+		padding:0 0.5em;
+		border-left:solid 0.2em $grey;
+	}
+	.prompt {
+		padding-right:0.5em;
+	}
+	form {
+		display:inline;
+		input {
+			padding:0;
+			margin:0;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:$blue;
+}
+
+.tree {
+	background:$dd-black;
+	padding:1em;
+	border-radius:$box-radius;
+}
+
+*.flush {
+	margin-bottom:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+header {
+	h1 a {
+		@include color_hover($green, $black, $yellow);
+		border-radius:$box-radius $box-radius 0 0;
+		display:block;
+		padding:0.8em 2.5vw;
+	}
+}
+
+nav {
+	display:flex;
+	justify-content:space-between;
+	a, button {
+		padding:0.1em 0;
+		width:100%;
+		@include color_hover($grey, $d-black, $d-black, $grey);
+		text-align:center;
+		font-weight:bold;
+		box-sizing:border-box;
+		&:first-child {
+			border-bottom-left-radius:$box-radius;
+		}
+		&:last-child {
+			border-bottom-right-radius:$box-radius;
+		}
+	}
+	font-size:1.2em;
+	.active {
+		color:$d-green;
+		&::before {
+			content:"~/";
+			color:$blue;
+		}
+	}
+}
+
+.blue {
+	color:$blue;
+}
+
+.grey {
+	color:$grey;
+}
+
+nav.main {
+	position:sticky;
+	top:0;
+}
+
+article {
+	background:$d-black;
+	padding:1em 2.5vw;
+}
+
+code {
+	display:block;
+	overflow:scroll;
+	background:$dd-black;
+	color:$green;
+	margin:1em 0;
+	max-height:40vh;
+	padding:1em;
+	border-radius:$box-radius;
+}
+
+.meta {
+	font-size:0.9em;
+	.fas {
+		width:1em;
+		text-align:center;
+		color:$grey;
+	}
+}
+
+.subtitle {
+	font-size:0.9em;
+	text-align:center;
+	margin:1em 0;
+	font-style:italic;
+	.fas {
+		font-size:0.6em;
+		vertical-align:top;
+		&:first-of-type {
+			margin-right:0.5em;
+		}
+		&:last-of-type {
+			margin-left:0.5em;
+		}
+	}
+}
+
+ul, ol {
+	margin:1em 0;
+}
