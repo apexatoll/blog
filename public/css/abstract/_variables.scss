@@ -1,8 +1,8 @@
 $l-black:#16222c;
-$black:darken($base, 3%);
-$d-black:darken($base, 5%);
-$dd-black:darken($base, 7%);
-$ddd-black:darken($base, 8%);
+$black:darken($l-black, 3%);
+$d-black:darken($l-black, 5%);
+$dd-black:darken($l-black, 7%);
+$ddd-black:darken($l-black, 8%);
 
 $cyan:#3db5e1;
 $yellow:#e39f31;

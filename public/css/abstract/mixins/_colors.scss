@@ -1,0 +1,23 @@
+@mixin color($fg, $bg){
+	color:$fg;
+	background:$bg;
+}
+
+@mixin fg_hover($fg, $hov){
+	color:$fg;
+	&:hover {
+		color:$hov;
+	}
+}
+
+@mixin bg_hover($bg, $hov){
+	background:$bg;
+	&:hover {
+		background:$hov;
+	}
+}
+
+@mixin color_hover($fg, $bg, $fg_hov, $bg_hov:$bg){
+	@include fg_hover($fg, $fg_hov);
+	@include bg_hover($bg, $bg_hov);
+}
