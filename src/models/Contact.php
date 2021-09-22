@@ -4,7 +4,8 @@ class Contact extends \core\Validate {
 	protected $name, $email, $subject, $message;
 	protected function new_rules(){
 		return [
-			self::RULE_REQ => ["name", "email", "subject", "message"]
+			self::RULE_REQ => ["name", "email", "subject", "message"],
+			self::RULE_EMAIL => ["email"]
 		];
 	}
 	protected function input_new(){
