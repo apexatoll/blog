@@ -1,7 +1,7 @@
 <?php namespace core;
 
 class Session {
-	public $id, $username, $type, $bookmarks, $name;
+	public $id, $username, $type, $bookmarks, $name, $email;
 	public function __construct(){
 		if(isset($_SESSION['id']))
 			$this->set();

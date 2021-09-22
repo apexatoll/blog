@@ -2,7 +2,7 @@
 <div class="contact-response"></div>
 <form id="contact-form">
 	<input type="text" name="name" placeholder="Enter name..." value="<?=$name?>">
-	<input type="text" name="email" placeholder="Enter email...">
+	<input type="text" name="email" placeholder="Enter email..." value="<?=$email?>">
 	<input type="text" name="subject" placeholder="Enter subject...">
 	<textarea name="message" rows="5" placeholder="Enter message..."></textarea>
 </form>
