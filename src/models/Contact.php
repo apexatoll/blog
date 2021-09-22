@@ -14,7 +14,8 @@ class Contact extends \core\Validate {
 		$sent = mail(
 			CONTACT,
 			$this->subject,
-			$this->message
+			$this->message,
+			"From: admin@bristolcode.co.uk"
 		);
 		if(!$sent) 
 			$this->error("message could not be sent");

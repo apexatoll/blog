@@ -4,7 +4,7 @@
 	<input type="text" name="name" placeholder="Enter name..." value="<?=$name?>">
 	<input type="text" name="email" placeholder="Enter email...">
 	<input type="text" name="subject" placeholder="Enter subject...">
-	<textarea name="body" rows="5" placeholder="Enter message..."></textarea>
+	<textarea name="message" rows="5" placeholder="Enter message..."></textarea>
 </form>
 <?=$this->_box()?>
 <nav>
