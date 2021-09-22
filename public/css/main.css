@@ -261,6 +261,15 @@ button.barred--footer.submit:hover, footer button.submit:hover {
   max-width: 1200px;
 }
 
+@media only screen and (max-width: 480px) {
+  .container, main {
+    width: 100%;
+  }
+
+  html {
+    font-size: 40px;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
